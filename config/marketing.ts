@@ -1,5 +1,5 @@
-export const marketingConfig = {
-  mainNav: [
+export const MARKETING = {
+  NAVIGATION: [
     {
       title: "Home",
       href: "/",

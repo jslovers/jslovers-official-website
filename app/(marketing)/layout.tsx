@@ -2,7 +2,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { MainNav } from "@/components/navigation/MainNav";
-import { marketingConfig } from "@/config/marketing";
+import { MARKETING } from "@/config/marketing";
 import { cn } from "@/lib/utils";
 
 interface MarketingLayoutProps {
@@ -16,7 +16,7 @@ export default async function MarketingLayout({
     <div className="flex min-h-screen flex-col">
       <header className="container z-40 bg-background">
         <div className="flex h-32 items-center justify-between py-6">
-          <MainNav items={marketingConfig.mainNav} />
+          <MainNav items={MARKETING.NAVIGATION} />
           <nav>
             <Link
               href="/register"
