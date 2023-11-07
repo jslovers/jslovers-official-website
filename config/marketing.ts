@@ -1,24 +1,24 @@
 export const MARKETING = {
   NAVIGATION: [
     {
-      title: "Home",
-      href: "/",
+      TITLE: "Home",
+      HREF: "/",
     },
     {
-      title: "Meetups",
-      href: "/meetups",
+      TITLE: "Meetups",
+      HREF: "/meetups",
     },
     {
-      title: "Jobs",
-      href: "/jobs",
+      TITLE: "Jobs",
+      HREF: "/jobs",
     },
     {
-      title: "Speakers",
-      href: "/speakers",
+      TITLE: "Speakers",
+      HREF: "/speakers",
     },
     {
-      title: "About",
-      href: "/about",
+      TITLE: "About",
+      HREF: "/about",
     },
   ],
 };

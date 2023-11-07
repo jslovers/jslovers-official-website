@@ -10,19 +10,22 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/">
-        <Icons.logo />
-      </Link>
+      <h1>
+        <Link href="/">
+          <span className="sr-only">JS Lovers</span>
+          <Icons.logo />
+        </Link>
+      </h1>
 
       {items?.length ? (
         <nav className="hidden gap-10 md:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
-              href={item.href}
+              href={item.HREF}
               className="flex items-center  md:text-lg  sm:text-sm "
             >
-              {item.title}
+              {item.TITLE}
             </Link>
           ))}
         </nav>

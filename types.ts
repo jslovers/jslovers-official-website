@@ -1,4 +1,4 @@
 export type NavItem = {
-  title: string;
-  href: string;
+  TITLE: string;
+  HREF: string;
 };
