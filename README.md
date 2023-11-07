@@ -29,6 +29,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## JSLovers Discord Server
+
+Check out: [JSLover Discord Server Link](<https://discord.com/invite/89QtcRw>)
+
 ## JSLovers Figma Design
 
 [Figma Link](<https://www.figma.com/file/Vic6wWFsQVt0YlR5jCkoT6/js-lovers-designfile-(Copy)?type=design&node-id=29%3A2&mode=design&t=hMqrYOFoES5B2Z2z-1>)
