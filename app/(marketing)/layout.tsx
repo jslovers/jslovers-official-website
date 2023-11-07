@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { buttonVariants } from "@/components/Button";
+import { Footer } from "@/components/Footer";
 import { MainNav } from "@/components/navigation/MainNav";
 import { marketingConfig } from "@/config/marketing";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
@@ -30,7 +31,7 @@ export default async function MarketingLayout({
         </div>
       </header>
       <main className="flex-1">{children}</main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
