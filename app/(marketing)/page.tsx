@@ -6,8 +6,10 @@ export default async function IndexPage() {
   return (
     <section className="relative isolate">
       <div className="container py-16 lg:px-8 ">
-        <div className="max-w-2xl gap-x-20 lg:flex lg:max-w-none lg:items-center">
-          <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl ">
+        <div className="max-w-2xl justify-between lg:flex lg:max-w-full lg:items-center gap-x-20">
+          {/* todo:make the below a separate dumb component  */}
+
+          <div className="w-1/2 max-w-2xl lg:shrink-0 ">
             <div className="flex items-center group flex-wrap">
               <Image
                 src="/assets/hero_image_guest_v1.png"
@@ -50,7 +52,7 @@ export default async function IndexPage() {
                   autoComplete="email"
                   placeholder="Enter your email"
                   required
-                  className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-16 pl-6 placeholder:text-lg placeholder:text-text-muted"
+                  className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-16 pl-6 placeholder:text-lg placeholder:text-"
                 />
                 <button
                   type="submit"
@@ -65,9 +67,9 @@ export default async function IndexPage() {
             </form>
           </div>
 
-          {/* image tiles */}
+          {/*  image tiles */}
 
-          <div className="hidden lg:flex w-full ">
+          <div className="hidden lg:flex w-1/2 ">
             <div className="w-1/2 flex flex-col justify-center ">
               <Image
                 src="/assets/hero_image_1_v1.png"
