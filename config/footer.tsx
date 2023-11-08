@@ -3,21 +3,21 @@ import { Icons } from "@/components/Icons";
 // TODO: Reconfiguration needed once footer content is finalised
 
 export const FOOTER = {
-  QuickLinks: [
+  QUICK_LINKS: [
     { TITLE: "Meetups", HREF: "#" },
     { TITLE: "Jobs", HREF: "#" },
     { TITLE: "Speakers", HREF: "#" },
     { TITLE: "About", HREF: "#" },
     { TITLE: "Contact", HREF: "#" },
   ],
-  FollowUs: [
+  FOLLOW_US: [
     { TITLE: "Meetups", HREF: "#" },
     { TITLE: "Jobs", HREF: "#" },
     { TITLE: "Speakers", HREF: "#" },
     { TITLE: "About", HREF: "#" },
     { TITLE: "Contact", HREF: "#" },
   ],
-  Sponsors: [
+  SPONSORS: [
     { TITLE: "Microsoft", HREF: "#", LOGO: <Icons.microsoft /> },
     { TITLE: "Razorpay", HREF: "#", LOGO: <Icons.razorpay /> },
     { TITLE: "Amazon", HREF: "#", LOGO: <Icons.amazon /> },
