@@ -50,13 +50,13 @@ export default async function IndexPage() {
                   autoComplete="email"
                   placeholder="Enter your email"
                   required
-                  className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-14 pl-6"
+                  className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-16 pl-6 placeholder:text-lg placeholder:text-text-muted"
                 />
                 <button
                   type="submit"
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "absolute inset-y-0 right-0 border-solid border-2 border-border"
+                    "absolute inset-y-0 right-0 border-solid border-2 border-border text-lg "
                   )}
                 >
                   Register for free &rarr;
