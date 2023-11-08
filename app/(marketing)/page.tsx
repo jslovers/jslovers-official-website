@@ -1,22 +1,24 @@
+import Image from "next/image";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 
 export default async function IndexPage() {
   return (
     <section className="relative isolate">
-      <div className="container px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-        <div className="max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-          <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-            <div className="flex items-center group flex-shrink-0">
-              <div>
-                <img
-                  className="inline-block h-40 w-40 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
-              </div>
+      <div className="container py-16 lg:px-8 ">
+        <div className="max-w-2xl gap-x-20 lg:flex lg:max-w-none lg:items-center">
+          <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl ">
+            <div className="flex items-center group flex-wrap">
+              <Image
+                src="/assets/hero_image_guest_v1.png"
+                width="149"
+                height="149"
+                alt="hero_image"
+                className="object-cover "
+                loading="lazy"
+              />
               <div className="ml-5">
-                <h2 className="text-2xl font-medium text-text-sub-heading-2 mb-2">
+                <h2 className="text-3xl font-medium text-text-sub-heading-2 mb-2">
                   Upcoming Workshop by
                 </h2>
                 <p className="text-xl font-semibold">John Doe</p>
@@ -25,18 +27,18 @@ export default async function IndexPage() {
                 </p>
               </div>
             </div>
-            <h1 className="mt-6 text-4xl font-bold tracking-wide">
+            <h1 className="mt-2 text-[40px] font-semibold leading-tight">
               Introduction To Design System and Storybook
             </h1>
-            <p className="relative mt-6 text-lg text-text-paragraph sm:max-w-md lg:max-w-none">
+            <p className="relative mt-2 text-lg text-text-paragraph sm:max-w-md lg:max-w-none">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
             </p>
-            <p className="mt-4 font-semibold text-text-accent">
+            <p className="mt-3 font-semibold text-text-accent">
               On 24th October at 05 : 00 AM IST
             </p>
-            <form className="mt-8 flex items-center">
+            <form className="mt-6 flex items-center">
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
@@ -61,6 +63,39 @@ export default async function IndexPage() {
                 </button>
               </div>
             </form>
+          </div>
+
+          {/* image tiles */}
+
+          <div className="hidden lg:flex w-full ">
+            <div className="w-1/2 flex flex-col justify-center ">
+              <Image
+                src="/assets/hero_image_1_v1.png"
+                width="254"
+                height="226"
+                alt="hero_image"
+                className="object-cover "
+                loading="lazy"
+              />
+            </div>
+            <div className="w-1/2 flex flex-col justify-center space-y-16">
+              <Image
+                src="/assets/hero_image_2_v1.png"
+                width="147"
+                height="179"
+                alt="hero_image"
+                className="object-cover ml-auto"
+                loading="lazy"
+              />
+              <Image
+                src="/assets/hero_image_3_v1.png"
+                width="260"
+                height="274"
+                alt="hero_image"
+                className="object-cover "
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
