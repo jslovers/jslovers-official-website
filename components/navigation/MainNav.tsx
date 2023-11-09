@@ -22,10 +22,10 @@ export function MainNav({ items }: MainNavProps) {
           {items?.map((item, index) => (
             <Link
               key={index}
-              href={item.HREF}
+              href={item.href || ""}
               className="flex items-center  md:text-lg  sm:text-sm "
             >
-              {item.TITLE}
+              {item.title}
             </Link>
           ))}
         </nav>
