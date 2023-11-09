@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Icons } from "./Icons";
 import { FOOTER } from "@/config/footer";
-import { FooterItem } from "@/types";
 
 //TODO: Redesign may be needed according to the finalised footer contnent
 
@@ -22,9 +21,9 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               <div className="text-center">
                 <h3 className="text-lg font-medium leading-6">Quick Links</h3>
                 <ul className="mt-6 space-y-4">
-                  {FOOTER.QUICK_LINKS.map((item: FooterItem) => (
-                    <li key={item.TITLE}>
-                      <Link href={item.HREF}>{item.TITLE}</Link>
+                  {FOOTER.QuickLinks.map((item) => (
+                    <li key={item.title}>
+                      <Link href={item.href || ""}>{item.title}</Link>
                     </li>
                   ))}
                 </ul>
@@ -32,9 +31,9 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               <div className="text-center">
                 <h3 className="text-lg font-medium leading-6">Follow Us</h3>
                 <ul className="mt-6 space-y-4">
-                  {FOOTER.FOLLOW_US.map((item: FooterItem) => (
-                    <li key={item.TITLE}>
-                      <Link href={item.HREF}>{item.TITLE}</Link>
+                  {FOOTER.FollowUs.map((item) => (
+                    <li key={item.title}>
+                      <Link href={item.href || ""}>{item.title}</Link>
                     </li>
                   ))}
                 </ul>
@@ -42,11 +41,11 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               <div className="text-center">
                 <h3 className="text-lg font-medium leading-6">Sponsors</h3>
                 <ul className="mt-6 space-y-4">
-                  {FOOTER.SPONSORS.map((item: FooterItem) => {
+                  {FOOTER.Sponsors.map((item) => {
                     return (
-                      <li key={item.TITLE} className="flex justify-center">
-                        <span className="sr-only">{item.TITLE}</span>
-                        {item.LOGO}
+                      <li key={item.title} className="flex justify-center">
+                        <span className="sr-only">{item.title}</span>
+                        {item.logo}
                       </li>
                     );
                   })}

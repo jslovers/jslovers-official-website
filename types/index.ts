@@ -20,3 +20,8 @@ export interface MarketingData {
   Navigation: NavItem[];
   Achievements: AchievementItem[];
 }
+export interface FooterData {
+  QuickLinks: FooterItem[];
+  FollowUs: FooterItem[];
+  Sponsors: FooterItem[];
+}

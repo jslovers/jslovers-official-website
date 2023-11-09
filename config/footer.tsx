@@ -1,26 +1,27 @@
 import { Icons } from "@/components/Icons";
+import { FooterData } from "@/types";
 
 // TODO: Reconfiguration needed once footer content is finalised
 
-export const FOOTER = {
-  QUICK_LINKS: [
-    { TITLE: "Meetups", HREF: "#" },
-    { TITLE: "Jobs", HREF: "#" },
-    { TITLE: "Speakers", HREF: "#" },
-    { TITLE: "About", HREF: "#" },
-    { TITLE: "Contact", HREF: "#" },
+export const FOOTER: FooterData = {
+  QuickLinks: [
+    { title: "Meetups", href: "#" },
+    { title: "Jobs", href: "#" },
+    { title: "Speakers", href: "#" },
+    { title: "About", href: "#" },
+    { title: "Contact", href: "#" },
   ],
-  FOLLOW_US: [
-    { TITLE: "Meetups", HREF: "#" },
-    { TITLE: "Jobs", HREF: "#" },
-    { TITLE: "Speakers", HREF: "#" },
-    { TITLE: "About", HREF: "#" },
-    { TITLE: "Contact", HREF: "#" },
+  FollowUs: [
+    { title: "Meetups", href: "#" },
+    { title: "Jobs", href: "#" },
+    { title: "Speakers", href: "#" },
+    { title: "About", href: "#" },
+    { title: "Contact", href: "#" },
   ],
-  SPONSORS: [
-    { TITLE: "Microsoft", HREF: "#", LOGO: <Icons.microsoft /> },
-    { TITLE: "Razorpay", HREF: "#", LOGO: <Icons.razorpay /> },
-    { TITLE: "Amazon", HREF: "#", LOGO: <Icons.amazon /> },
-    { TITLE: "IBM", HREF: "#", LOGO: <Icons.ibm /> },
+  Sponsors: [
+    { title: "Microsoft", href: "#", logo: <Icons.microsoft /> },
+    { title: "Razorpay", href: "#", logo: <Icons.razorpay /> },
+    { title: "Amazon", href: "#", logo: <Icons.amazon /> },
+    { title: "IBM", href: "#", logo: <Icons.ibm /> },
   ],
 };
