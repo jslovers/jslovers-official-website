@@ -1,7 +1,8 @@
 import Image from "next/image";
+import SectionHeader from "@/components/SectionHeader";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
-import SectionHeader from "@/components/SectionHeader";
+import { MARKETING } from "@/config/marketing";
 
 export default async function IndexPage() {
   return (
@@ -108,17 +109,17 @@ export default async function IndexPage() {
         <div className="container py-16 space-y-16">
           <SectionHeader header="Our Achivements" className="w-min mx-auto" />
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-4">
-            {Achievements.map((achievement) => {
+            {MARKETING.Achievements.map((achievement) => {
               return (
-                <div key={achievement.name} className="flex flex-col">
+                <div key={achievement.title} className="flex flex-col">
                   <dt className="text-2xl text-center font-semibold">
-                    {achievement.name}
+                    {achievement.title}
                   </dt>
                   <dd className="flex flex-col items-center">
                     <div className="h-40 flex items-center">
                       <Image
                         src={achievement.image.src}
-                        alt={achievement.name}
+                        alt={achievement.title}
                         width={achievement.image.width}
                         height={achievement.image.height}
                       />
@@ -134,46 +135,3 @@ export default async function IndexPage() {
     </>
   );
 }
-
-const Achievements = [
-  {
-    name: "10,000+ Memebers",
-    description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    image: {
-      src: "/assets/achievement_1_v1.png",
-      width: 143,
-      height: 125,
-    },
-  },
-  {
-    name: "100+ Workshops",
-    description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    image: {
-      src: "/assets/achievement_2_v1.png",
-      width: 158,
-      height: 125,
-    },
-  },
-  {
-    name: "100+ Sponsers",
-    description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    image: {
-      src: "/assets/achievement_3_v1.png",
-      width: 194,
-      height: 125,
-    },
-  },
-  {
-    name: "100+ Speakers",
-    description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    image: {
-      src: "/assets/achievement_4_v1.png",
-      width: 223,
-      height: 125,
-    },
-  },
-];
