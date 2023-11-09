@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
+import SectionHeader from "@/components/SectionHeader";
 
 export default async function IndexPage() {
   return (
@@ -105,85 +106,7 @@ export default async function IndexPage() {
       </section>
       <section className="isolate">
         <div className="container py-16 space-y-16">
-          <div className="flex flex-col w-min mx-auto">
-            <h3 className="text-[40px] font-semibold text-right">
-              Our Achievements
-            </h3>
-            <div className="flex gap-2">
-              <svg
-                width="266"
-                height="12"
-                viewBox="0 0 266 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1.5"
-                  y="1.5"
-                  width="263"
-                  height="9"
-                  rx="2.5"
-                  fill="white"
-                  stroke="#505050"
-                  stroke-width="3"
-                />
-              </svg>
-              <svg
-                width="54"
-                height="12"
-                viewBox="0 0 54 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1.5"
-                  y="1.5"
-                  width="51"
-                  height="9"
-                  rx="2.5"
-                  fill="white"
-                  stroke="#505050"
-                  stroke-width="3"
-                />
-              </svg>
-              <svg
-                width="54"
-                height="12"
-                viewBox="0 0 54 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1.5"
-                  y="1.5"
-                  width="51"
-                  height="9"
-                  rx="2.5"
-                  fill="white"
-                  stroke="#505050"
-                  stroke-width="3"
-                />
-              </svg>
-              <svg
-                width="54"
-                height="12"
-                viewBox="0 0 54 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1.5"
-                  y="1.5"
-                  width="51"
-                  height="9"
-                  rx="2.5"
-                  fill="white"
-                  stroke="#505050"
-                  stroke-width="3"
-                />
-              </svg>
-            </div>
-          </div>
+          <SectionHeader header="Our Achivements" className="w-min mx-auto" />
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-4">
             {Achievements.map((achievement) => {
               return (
