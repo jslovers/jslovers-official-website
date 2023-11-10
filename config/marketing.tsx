@@ -65,4 +65,66 @@ export const MARKETING: MarketingData = {
       },
     },
   ],
+  PreviousTalks: [
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+    {
+      date: "20 May 2021",
+      title: "Introduction to ReactJs",
+      image: {
+        src: "/assets/achievement_4_v1.png",
+        width: 223,
+        height: 125,
+      },
+      speaker: "Neha Sharma",
+    },
+  ],
 };

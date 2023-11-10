@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel {
+  @apply inline-flex overflow-x-scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  &-item {
+    @apply box-content flex flex-none;
+    scroll-snap-align: start;
+  }
+  &-center .carousel-item {
+    scroll-snap-align: center;
+  }
+  &-end .carousel-item {
+    scroll-snap-align: end;
+  }
+}

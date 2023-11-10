@@ -16,9 +16,15 @@ export type AchievementItem = NavItem & {
   };
 };
 
+export type TalkItem = Omit<AchievementItem, "description"> & {
+  date: string;
+  speaker: string;
+};
+
 export interface MarketingData {
   Navigation: NavItem[];
   Achievements: AchievementItem[];
+  PreviousTalks: TalkItem[];
 }
 export interface FooterData {
   QuickLinks: FooterItem[];

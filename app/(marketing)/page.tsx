@@ -132,6 +132,44 @@ export default async function IndexPage() {
           </dl>
         </div>
       </section>
+
+      {/* Todo: A discussion with maintainers on having a custom carousel component preferably or a lib of their choosing  */}
+
+      <section className="isolate">
+        <div className="container py-16 space-y-16 flex flex-col justify-center items-center">
+          <SectionHeader header="Previous talks" className="w-min" />
+          <div className="carousel carousel-center max-w-full flex justify-between gap-8 py-5">
+            {MARKETING.PreviousTalks.map((previousTalk) => {
+              return (
+                <div
+                  key={previousTalk.title}
+                  className="carousel-item border-2 border-border rounded-lg p-7"
+                >
+                  <div className="w-80 h-80 flex flex-col">
+                    <div className="h-2/3 flex justify-center items-center">
+                      <Image
+                        src={previousTalk.image.src}
+                        alt={previousTalk.title}
+                        width={previousTalk.image.width}
+                        height={previousTalk.image.height}
+                      />
+                    </div>
+                    <span className="text-[20px] font-medium">
+                      {previousTalk.date}
+                    </span>
+                    <h4 className="text-[28px] font-semibold">
+                      {previousTalk.title}
+                    </h4>
+                    <p className="text-lg font-semibold text-text-sub-heading">
+                      by {previousTalk.speaker}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
