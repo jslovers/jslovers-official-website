@@ -18,6 +18,7 @@ const config: Config = {
           button: "#AAC6FC",
           tab: "#CCC",
           "tab-active": "#F6E258",
+          secondary: "#FCAAE5",
         },
         border: {
           DEFAULT: "#000",

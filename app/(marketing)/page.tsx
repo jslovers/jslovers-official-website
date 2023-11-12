@@ -282,6 +282,49 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* todo: make a dumb component out of it */}
+
+      <section className="isolate bg-background-secondary">
+        <div className="max-w-2xl mx-auto py-16 text-center">
+          <h2 className="text-[40px] font-semibold leading-tight">
+            Introduction To Design System and Storybook
+          </h2>
+          <p className="mt-3 text-lg text-text-paragraph">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+          <p className="mt-3 font-semibold text-text-accent">
+            On 24th October at 05 : 00 AM IST
+          </p>
+          <form className="mt-6 flex items-center">
+            <label htmlFor="email-address" className="sr-only">
+              Email address
+            </label>
+            <div className="relative flex flex-grow items-stretch">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autoComplete="email"
+                placeholder="Enter your email"
+                required
+                className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-16 pl-6 placeholder:text-lg placeholder:text-"
+              />
+              <button
+                type="submit"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "absolute inset-y-0 right-0 border-solid border-2 border-border text-lg "
+                )}
+              >
+                Register for free &rarr;
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </>
   );
 }
