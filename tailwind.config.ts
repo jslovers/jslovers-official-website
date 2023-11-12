@@ -30,6 +30,7 @@ const config: Config = {
           paragraph: "#505050",
           muted: "#696969",
           "sub-heading": "#383A48",
+          label: "#383A48",
           accent: "#1E4CA1",
           "sub-heading-2": "#232323",
         },

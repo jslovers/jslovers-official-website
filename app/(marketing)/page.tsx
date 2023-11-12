@@ -170,6 +170,118 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* todo: have a discussion on how to handle multiple type of joinees and made changes to form according to that */}
+
+      <section className="isolate">
+        <div className="container py-16 ">
+          <div className=" flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+            <form action="#" method="POST" className="lg:flex-auto w-1/2">
+              <h2 className="text-5xl text-text-sub-heading font-semibold tracking-tight ">
+                Wanna be a JsLover ?
+              </h2>
+              <p className="mt-6 text-lg">
+                We welcome everyone to join jslover whether as a sponser,
+                speaker or to be a part of jslovers core team. We welcome you
+              </p>
+              <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-xl text-text-label font-medium"
+                  >
+                    Name
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      autoComplete="name"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-xl text-text-label font-medium"
+                  >
+                    Email
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="designation"
+                    className="block text-xl text-text-label font-medium"
+                  >
+                    Designation
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="designation"
+                      name="designation"
+                      type="text"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      placeholder="Enter your designation"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="linkedin"
+                    className="block text-xl text-text-label font-medium"
+                  >
+                    LinkedIn
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="url"
+                      name="linkedin"
+                      id="linkedin"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      placeholder="Enter your profile"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-10">
+                <button
+                  type="submit"
+                  className={cn(
+                    buttonVariants(),
+                    "border-2 border-border h-14 w-1/3 justify-between text-xl font-medium"
+                  )}
+                >
+                  <span> Apply Now</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
+            </form>
+            <div className="lg:w-1/2 flex justify-center items-center">
+              <figure className="border-8 border-border lg:p-6 rounded-[10px]">
+                <Image
+                  src="/assets/group_demo.png"
+                  alt="group demo"
+                  height="324"
+                  width="546"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
