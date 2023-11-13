@@ -180,8 +180,12 @@ export default async function IndexPage() {
 
       <section className="isolate">
         <div className="container py-16 ">
-          <div className=" flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-            <form action="#" method="POST" className="lg:flex-auto w-1/2">
+          <div className="flex flex-col-reverse gap-16 sm:gap-y-20 lg:flex-row">
+            <form
+              action="#"
+              method="POST"
+              className="lg:flex-auto w-full lg:w-1/2"
+            >
               <h2 className="text-5xl text-text-sub-heading font-semibold tracking-tight ">
                 Wanna be a JsLover ?
               </h2>
@@ -266,7 +270,7 @@ export default async function IndexPage() {
                   type="submit"
                   className={cn(
                     buttonVariants(),
-                    "border-2 border-border h-14 w-1/3 justify-between text-xl font-medium"
+                    "border-2 border-border h-14 w-2/3 lg:w-1/3 justify-between text-xl font-medium"
                   )}
                 >
                   <span> Apply Now</span>
@@ -274,7 +278,7 @@ export default async function IndexPage() {
                 </button>
               </div>
             </form>
-            <div className="lg:w-1/2 flex justify-center items-center">
+            <div className=" lg:w-1/2 flex justify-center items-center">
               <figure className="border-8 border-border lg:p-6 rounded-[10px]">
                 <Image
                   src="/assets/group_demo.png"
