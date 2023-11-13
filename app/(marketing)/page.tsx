@@ -58,7 +58,7 @@ export default async function IndexPage() {
             {MARKETING.Achievements.map((achievement) => {
               return (
                 <div key={achievement.title} className="flex flex-col">
-                  <dt className="text-2xl text-center font-semibold">
+                  <dt className="text-xl lg:text-2xl text-center font-semibold">
                     {achievement.title}
                   </dt>
                   <dd className="flex flex-col items-center">
@@ -70,7 +70,9 @@ export default async function IndexPage() {
                         height={achievement.image.height}
                       />
                     </div>
-                    <p className="text-center">{achievement.description}</p>
+                    <p className="text-sm lg:text-base text-center text-text-paragraph">
+                      {achievement.description}
+                    </p>
                   </dd>
                 </div>
               );
