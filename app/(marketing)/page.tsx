@@ -239,22 +239,22 @@ export default async function IndexPage() {
 
       <section className="isolate bg-background-secondary">
         <div className="container max-w-2xl mx-auto py-16 text-center">
-          <h2 className="text-[40px] font-semibold leading-tight">
+          <h2 className="text-2xl lg:text-[40px] font-semibold leading-tight">
             Introduction To Design System and Storybook
           </h2>
-          <p className="mt-3 text-lg text-text-paragraph">
+          <p className="mt-3 text-base lg:text-lg text-text-paragraph">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <p className="mt-3 font-semibold text-text-accent">
+          <p className="mt-3 text-sm lg:text-xl font-semibold text-text-accent">
             On 24th October at 05 : 00 AM IST
           </p>
           <form className="mt-6 flex items-center">
             <label htmlFor="email-address" className="sr-only">
               Email address
             </label>
-            <div className="relative flex flex-grow items-stretch">
+            <div className="relative flex flex-col lg:flex-row flex-grow space-y-4 lg:space-y-0">
               <input
                 type="email"
                 name="email"
@@ -262,16 +262,19 @@ export default async function IndexPage() {
                 autoComplete="email"
                 placeholder="Enter your email"
                 required
-                className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input h-16 pl-6 placeholder:text-lg placeholder:text-"
+                className="flex-auto w-full rounded-lg border-0  text-sm lg:text-lg  ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg "
               />
               <button
                 type="submit"
                 className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "absolute inset-y-0 right-0 border-solid border-2 border-border text-lg "
+                  buttonVariants({
+                    size: "lg",
+                  }),
+                  "lg:absolute lg:inset-y-0 lg:right-0 border-solid border-2 border-border text-sm lg:text-lg h-12 lg:h-16 justify-between "
                 )}
               >
-                Register for free &rarr;
+                <span>Register for free</span>
+                <span>&rarr;</span>
               </button>
             </div>
           </form>
