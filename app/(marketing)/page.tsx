@@ -148,9 +148,9 @@ export default async function IndexPage() {
               return (
                 <div
                   key={previousTalk.title}
-                  className="carousel-item border-2 border-border rounded-lg p-7"
+                  className="carousel-item border-2 border-border rounded-lg  p-5 lg:p-7"
                 >
-                  <div className="w-80 h-80 flex flex-col">
+                  <div className="w-60 lg:w-80 h-60 lg:h-80 flex flex-col">
                     <div className="h-2/3 flex justify-center items-center">
                       <Image
                         src={previousTalk.image.src}
