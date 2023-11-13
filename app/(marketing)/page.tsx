@@ -295,7 +295,7 @@ export default async function IndexPage() {
       {/* todo: make a dumb component out of it */}
 
       <section className="isolate bg-background-secondary">
-        <div className="max-w-2xl mx-auto py-16 text-center">
+        <div className="container max-w-2xl mx-auto py-16 text-center">
           <h2 className="text-[40px] font-semibold leading-tight">
             Introduction To Design System and Storybook
           </h2>
