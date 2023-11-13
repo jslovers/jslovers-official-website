@@ -119,7 +119,7 @@ export default async function IndexPage() {
         </div>
       </section>
 
-      {/* todo: have a discussion on how to handle multiple type of joinees and made changes to form according to that */}
+      {/* todo: have a discussion on how to handle multiple type of joinees and make changes to form according to that */}
 
       <section className="isolate">
         <div className="container py-16 ">
@@ -129,18 +129,18 @@ export default async function IndexPage() {
               method="POST"
               className="lg:flex-auto w-full lg:w-1/2"
             >
-              <h2 className="text-5xl text-text-sub-heading font-semibold tracking-tight ">
+              <h2 className="text-2xl lg:text-5xl text-text-sub-heading font-semibold text-center lg:text-left ">
                 Wanna be a JsLover ?
               </h2>
-              <p className="mt-6 text-lg">
+              <p className="mt-6 text-base lg:text-lg text-center lg:text-left tracking-wide w-full lg:w-3/4">
                 We welcome everyone to join jslover whether as a sponser,
-                speaker or to be a part of jslovers core team. We welcome you
+                speaker or to be a part of jslovers core team. We welcome you.
               </p>
               <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="name"
-                    className="block text-xl text-text-label font-medium"
+                    className="block text-base lg:text-xl text-text-label font-medium"
                   >
                     Name
                   </label>
@@ -150,7 +150,7 @@ export default async function IndexPage() {
                       id="name"
                       name="name"
                       autoComplete="name"
-                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border text-sm lg:text-lg"
                       placeholder="Enter your name"
                     />
                   </div>
@@ -158,7 +158,7 @@ export default async function IndexPage() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="email"
-                    className="block text-xl text-text-label font-medium"
+                    className="block text-base lg:text-xl text-text-label font-medium"
                   >
                     Email
                   </label>
@@ -168,7 +168,7 @@ export default async function IndexPage() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border text-sm lg:text-lg"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -176,7 +176,7 @@ export default async function IndexPage() {
                 <div>
                   <label
                     htmlFor="designation"
-                    className="block text-xl text-text-label font-medium"
+                    className="block text-base lg:text-xl text-text-label font-medium"
                   >
                     Designation
                   </label>
@@ -185,7 +185,7 @@ export default async function IndexPage() {
                       id="designation"
                       name="designation"
                       type="text"
-                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border text-sm lg:text-lg"
                       placeholder="Enter your designation"
                     />
                   </div>
@@ -193,7 +193,7 @@ export default async function IndexPage() {
                 <div>
                   <label
                     htmlFor="linkedin"
-                    className="block text-xl text-text-label font-medium"
+                    className="block text-base lg:text-xl text-text-label font-medium"
                   >
                     LinkedIn
                   </label>
@@ -202,7 +202,7 @@ export default async function IndexPage() {
                       type="url"
                       name="linkedin"
                       id="linkedin"
-                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border"
+                      className="block w-full rounded-md h-11 px-3.5 shadow-sm ring-2 ring-inset ring-border text-sm lg:text-lg"
                       placeholder="Enter your profile"
                     />
                   </div>
@@ -212,8 +212,8 @@ export default async function IndexPage() {
                 <button
                   type="submit"
                   className={cn(
-                    buttonVariants(),
-                    "border-2 border-border h-14 w-2/3 lg:w-1/3 justify-between text-xl font-medium"
+                    buttonVariants({ size: "lg" }),
+                    "border-2 border-border h-[50px] lg:h-14 w-2/3 lg:w-1/3 justify-between text-base lg:text-xl font-medium"
                   )}
                 >
                   <span> Apply Now</span>
