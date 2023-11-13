@@ -1,4 +1,5 @@
 import { MarketingData } from "@/types";
+import speakerImage from "public/assets/hero_image_guest_v1.png";
 
 export const MARKETING: MarketingData = {
   Navigation: [
@@ -127,4 +128,13 @@ export const MARKETING: MarketingData = {
       speaker: "Neha Sharma",
     },
   ],
+  WorkshopData: {
+    speakerImageSrc: speakerImage,
+    speakerName: "John Doe",
+    speakerRole: "Frontend Architect at Apple",
+    workshopTitle: "Introduction To Design System and Storybook",
+    workshopDate: " On 24th October at 05:00 AM IST",
+    workshopDescription:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+  },
 };
