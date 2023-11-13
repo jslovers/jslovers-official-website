@@ -15,17 +15,15 @@ const SectionHeader = ({ header, className }: SectionHeaderProps) => {
   const mobileHeights = [12, 12, 12];
 
   return (
-    <div className={cn("flex flex-col", className)}>
+    <div className={cn("flex flex-col gap-1 lg:gap-4", className)}>
       <h3 className="text-2xl lg:text-[40px] font-semibold text-left lg:text-right">
         {header}
       </h3>
-      <div>
-        <div className="hidden lg:flex gap-2">
-          {generateUnderlineSVGs(desktopWidths, desktopHeights)}
-        </div>
-        <div className="flex gap-1 lg:hidden ">
-          {generateUnderlineSVGs(mobileWidths, mobileHeights)}
-        </div>
+      <div className="hidden lg:flex gap-2">
+        {generateUnderlineSVGs(desktopWidths, desktopHeights)}
+      </div>
+      <div className="flex gap-1 lg:hidden ">
+        {generateUnderlineSVGs(mobileWidths, mobileHeights)}
       </div>
     </div>
   );
