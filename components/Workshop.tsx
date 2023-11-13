@@ -22,37 +22,36 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
   return (
     <div className={cn(className)}>
       <div className="flex justify-center lg:justify-start items-center group flex-wrap">
-        <div className="lg:w-[149px] lg:h-[149px]">
-          <Image src={speakerImageSrc} alt="hero_image" />
-        </div>
-
-        <div className="lg:ml-5 text-center lg:text-left">
-          <h2 className="text-2xl lg:text-3xl font-medium text-text-sub-heading-2 mb-2">
+        <Image
+          src={speakerImageSrc}
+          alt="hero_image"
+          className="mb-4 lg:mb-0"
+        />
+        <div className="lg:ml-5 text-center lg:text-left space-y-1.5">
+          <h2 className="text-xl lg:text-3xl font-medium text-text-sub-heading-2">
             Upcoming Workshop by
           </h2>
-          <p className="text-xl font-semibold">{speakerName}</p>
-          <p className="text-base font-semibold text-text-muted">
+          <p className="text-lg lg:text-xl font-semibold">{speakerName}</p>
+          <p className="text-sm lg:text-base font-semibold text-text-muted">
             {speakerRole}
           </p>
         </div>
       </div>
-      <h1 className="mt-2 text-center lg:text-left text-[40px] font-semibold leading-tight">
+      <h1 className="mt-2 text-center lg:text-left text-2xl lg:text-[40px] font-semibold leading-tight">
         {workshopTitle}
       </h1>
-      <p className="relative mt-2 text-center lg:text-left text-lg text-text-paragraph sm:max-w-md lg:max-w-none">
+      <p className="relative mt-2 text-center lg:text-left text-base lg:text-lg text-text-paragraph sm:max-w-md lg:max-w-none">
         {workshopDescription}
       </p>
-      <p className="mt-3 font-semibold text-text-accent text-center lg:text-left">
+      <p className="mt-3 font-semibold text-text-accent text-center lg:text-left text-sm lg:text-xl">
         {workshopDate}
       </p>
-
-      {/* todo:mobile view  */}
 
       <form className="mt-6 flex items-center">
         <label htmlFor="email-address" className="sr-only">
           Email address
         </label>
-        <div className="relative flex flex-grow items-stretch">
+        <div className="relative flex flex-col lg:flex-row flex-grow space-y-4 lg:space-y-0">
           <input
             type="email"
             name="email"
@@ -60,7 +59,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
             autoComplete="email"
             placeholder="Enter your email"
             required
-            className="flex-auto w-full rounded-lg border-0  sm:text-sm sm:leading-6 ring-2 ring-inset ring-border-input  h-16 pl-6 placeholder:text-lg placeholder:text-"
+            className="flex-auto w-full rounded-lg border-0  text-sm lg:text-lg  ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg "
           />
           <button
             type="submit"
@@ -68,10 +67,11 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
               buttonVariants({
                 size: "lg",
               }),
-              "absolute inset-y-0 right-0 border-solid border-2 border-border text-lg "
+              "lg:absolute lg:inset-y-0 lg:right-0 border-solid border-2 border-border text-sm lg:text-lg h-12 lg:h-16 justify-between "
             )}
           >
-            Register for free &rarr;
+            <span>Register for free</span>
+            <span>&rarr;</span>
           </button>
         </div>
       </form>
