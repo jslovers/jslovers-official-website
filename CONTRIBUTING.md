@@ -19,7 +19,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-
 ## How to Contribute
 
 1. **Fork the Repository**: Click the "Fork" button on the top right corner of this repository to create your copy of the project.
@@ -60,7 +59,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Coding Standards
 
-Please follow the coding standards and guidelines specific to the "JSLovers" project. If you're unsure about any coding standards, you can check the project's `CONTRIBUTING.md` or ask for clarification in your pull request or by reaching out to maintainers.
+Please adhere to the following coding standards when contributing to the code:
+
+- Add Unit Test Cases
+- Add text tokens for Internationalization (for this also add check box for PR template)
+- Try to reuse existing components, if you don't find any existing please make one wherever necessary.
+- Please don't leave any Debugger & Console.log statements.
+- Please comment your code for other developers where you feel logic is complex.
+- Try to write code which is easily understandable by other fellow developers.
 
 ## Issues
 
@@ -68,7 +74,9 @@ You can contribute not only through code but also by helping to identify and res
 
 ## Communication
 
-If you have questions or need assistance, you can reach out to the project maintainers through GitHub issues or other communication channels, such as a dedicated Discord server or Slack workspace (if applicable).
+If you have questions or need assistance, you can reach out to the project maintainers through GitHub issues or other communication channels, such as a dedicated Discord server.
+
+Check out: [JSLover Discord Server Link](<https://discord.com/invite/89QtcRw>)
 
 ## Attribution
 
