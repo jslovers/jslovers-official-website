@@ -27,6 +27,7 @@ Example:
 For chores or maintenance tasks, use the following format:
 
 - Type: Chore
+- Category & Scope: Add if necessary
 - Task: [Specify the chore or maintenance task]
 
 Example:
