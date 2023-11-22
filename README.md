@@ -43,3 +43,7 @@ Check out: [JSLover Discord Server Link](<https://discord.com/invite/89QtcRw>)
 ## JSLovers Figma Design
 
 [Figma Link](<https://www.figma.com/file/Vic6wWFsQVt0YlR5jCkoT6/js-lovers-designfile-(Copy)?type=design&node-id=29%3A2&mode=design&t=hMqrYOFoES5B2Z2z-1>)
+
+
+### Contribution:
+- [Raising an Issue](./docs/RaiseIssue.md)
