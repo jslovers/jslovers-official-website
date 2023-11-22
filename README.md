@@ -29,6 +29,13 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## JSLovers Project Coding Standards
+
+Please follow the coding standards and guidelines specific to the "JSLovers" project. If you're unsure about any coding standards, or ask for clarification in your pull request or by reaching out to maintainers.
+
+For additional guidance, please refer to the project's contributing guidelines:
+[Contributing Guidelines](<./CONTRIBUTING.md>)
+
 ## JSLovers Discord Server
 
 Check out: [JSLover Discord Server Link](<https://discord.com/invite/89QtcRw>)
