@@ -24,9 +24,15 @@ Fixes # (issue)
 
 ## Added tests?
 
-- [ ] 👍 yes
-- [ ] 🙅 no, because they aren't needed
-- [ ] 🙋 no, because I need help
+- [ ] 👍 Yes
+- [ ] 🙅 No, because they aren't needed
+- [ ] 🙋 No, because I need help
+
+## Internationalization Support?
+
+- [ ] 👍 Yes, Added text tokens
+- [ ] 🙅 No, because they aren't needed
+- [ ] 🙋 No, because I need help
 
 **Steps to test the feature:**
 
