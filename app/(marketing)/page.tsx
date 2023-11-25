@@ -51,14 +51,15 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
+
       <section className="isolate">
         <div className="container py-16 space-y-16">
           <SectionHeader header="Our Achivements" className="w-min mx-auto" />
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
             {MARKETING.Achievements.map((achievement) => {
               return (
                 <div key={achievement.title} className="flex flex-col">
-                  <dt className="text-xl lg:text-2xl text-center font-semibold">
+                  <dt className="text-xl  xl:text-2xl text-center font-semibold">
                     {achievement.title}
                   </dt>
                   <dd className="flex flex-col items-center">
