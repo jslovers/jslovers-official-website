@@ -18,7 +18,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
             </p>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-8 lg:col-span-2 lg:mt-0">
-            <div className="md:grid md:grid-cols-3 space-y-6 md:space-y-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 md:space-y-0">
               <div className="lg:text-center">
                 <h3 className="text-lg font-medium leading-6">Quick Links</h3>
                 <ul className="mt-4 space-y-4">
@@ -39,7 +39,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                   ))}
                 </ul>
               </div>
-              <div className="lg:text-center">
+              <div className="mt-6 sm:mt-0 lg:text-center">
                 <h3 className="text-lg font-medium leading-6">Sponsors</h3>
                 <ul className="mt-4 space-y-4">
                   {FOOTER.Sponsors.map((item) => {

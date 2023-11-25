@@ -18,7 +18,7 @@ export function MainNav({ items }: MainNavProps) {
       </h1>
 
       {items?.length ? (
-        <nav className="hidden gap-10 md:flex">
+        <nav className="hidden gap-10 lg:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
