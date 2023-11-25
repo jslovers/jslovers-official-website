@@ -87,14 +87,14 @@ export default async function IndexPage() {
       <section className="isolate">
         <div className="container py-16 space-y-16 flex flex-col justify-center items-center">
           <SectionHeader header="Previous talks" className="w-min" />
-          <div className="carousel carousel-center max-w-full flex justify-between gap-8 py-5">
-            {MARKETING.PreviousTalks.map((previousTalk) => {
+          <div className="carousel carousel-center max-w-full flex justify-between gap-7 xl:gap-8 py-5">
+            {MARKETING.PreviousTalks.map((previousTalk, index) => {
               return (
                 <div
-                  key={previousTalk.title}
-                  className="carousel-item border-2 border-border rounded-lg  p-5 lg:p-7"
+                  key={`previousTalk.title + ${index}`}
+                  className="carousel-item border-2 border-border rounded-lg p-5 lg:p-7"
                 >
-                  <div className="w-60 lg:w-80 h-60 lg:h-80 flex flex-col">
+                  <div className="w-60 h-60  md:w-70 md:h-70 xl:w-80 xl:h-80  flex flex-col">
                     <div className="h-2/3 flex justify-center items-center">
                       <Image
                         src={previousTalk.image.src}
