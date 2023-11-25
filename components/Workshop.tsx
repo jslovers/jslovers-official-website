@@ -27,8 +27,8 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
           alt="hero_image"
           className="mb-4 lg:mb-0"
         />
-        <div className="lg:ml-5 text-center lg:text-left space-y-1.5">
-          <h2 className="text-xl lg:text-3xl font-medium text-text-sub-heading-2">
+        <div className="sm:ml-5 text-center sm:text-left space-y-1.5">
+          <h2 className="text-xl  lg:text-2xl xl:text-3xl font-medium text-text-sub-heading-2">
             Upcoming Workshop by
           </h2>
           <p className="text-lg lg:text-xl font-semibold">{speakerName}</p>
@@ -40,7 +40,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
       <h1 className="mt-2 text-center lg:text-left text-2xl lg:text-[40px] font-semibold leading-tight">
         {workshopTitle}
       </h1>
-      <p className="relative mt-2 text-center lg:text-left text-base lg:text-lg text-text-paragraph sm:max-w-md lg:max-w-none">
+      <p className="relative mt-2 text-center lg:text-left text-base lg:text-lg text-text-paragraph sm:max-w-full lg:max-w-none">
         {workshopDescription}
       </p>
       <p className="mt-3 font-semibold text-text-accent text-center lg:text-left text-sm lg:text-xl">
