@@ -130,10 +130,10 @@ export default async function IndexPage() {
               method="POST"
               className="lg:flex-auto w-full lg:w-1/2"
             >
-              <h2 className="text-2xl lg:text-5xl text-text-sub-heading font-semibold text-center lg:text-left ">
+              <h2 className="text-2xl sm:text-4xl xl:text-5xl text-text-sub-heading font-semibold text-center lg:text-left ">
                 Wanna be a JsLover ?
               </h2>
-              <p className="mt-6 text-base lg:text-lg text-center lg:text-left tracking-wide w-full lg:w-3/4">
+              <p className="mt-6 text-base lg:text-lg text-center lg:text-left tracking-wide w-full xl:w-3/4">
                 We welcome everyone to join jslover whether as a sponser,
                 speaker or to be a part of jslovers core team. We welcome you.
               </p>
@@ -214,7 +214,7 @@ export default async function IndexPage() {
                   type="submit"
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "border-2 border-border h-[50px] lg:h-14 w-2/3 lg:w-1/3 justify-between text-base lg:text-xl font-medium"
+                    "border-2 border-border h-[50px] xl:h-14 w-2/3 sm:w-2/6 md:w-2/4  xl:w-1/3 justify-between text-base lg:text-xl font-medium"
                   )}
                 >
                   <span> Apply Now</span>
