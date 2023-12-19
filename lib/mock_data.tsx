@@ -96,3 +96,13 @@ export const jobsList = [
     company_logo: "/assets/razorpay_logo.svg",
   },
 ];
+
+export const comapnyFilterOptions = ["Amazon", "Razorpay"];
+export const roleFilterOptions = ["Full time", "Part time", "Contract"];
+export const experienceFilterOptions = [
+  "<1 year",
+  "1-2 years",
+  "3-4 years",
+  "5+ years",
+];
+export const locationFilterOptions = ["abc", "xyz"];

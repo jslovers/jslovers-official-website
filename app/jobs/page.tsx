@@ -2,7 +2,13 @@ import { buttonVariants } from "@/components/Button";
 import Dropdown from "@/components/Dropdown";
 import { Icons } from "@/components/Icons";
 import JobCard from "@/components/JobCard";
-import { jobsList } from "@/lib/mock_data";
+import {
+  comapnyFilterOptions,
+  experienceFilterOptions,
+  jobsList,
+  locationFilterOptions,
+  roleFilterOptions,
+} from "@/lib/mock_data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -35,10 +41,26 @@ export default async function JobsPage() {
             Filter the job results as per your need
           </p>
           <div className="flex items-center gap-x-8 mt-6">
-            <Dropdown />
-            <Dropdown />
-            <Dropdown />
-            <Dropdown />
+            <Dropdown
+              filter_name="Company"
+              filter_options={comapnyFilterOptions}
+              filter_background="#e0719e"
+            />
+            <Dropdown
+              filter_name="Role"
+              filter_options={roleFilterOptions}
+              filter_background="#f6e049"
+            />
+            <Dropdown
+              filter_name="Experience"
+              filter_options={experienceFilterOptions}
+              filter_background="#7fd6c2"
+            />
+            <Dropdown
+              filter_name="Location"
+              filter_options={locationFilterOptions}
+              filter_background="#f6a649"
+            />
           </div>
 
           <div className="mt-16 mb-9 border-[1.5px] border-divider" />
