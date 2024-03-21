@@ -43,3 +43,16 @@ export interface FooterData {
   FollowUs: FooterItem[];
   Sponsors: FooterItem[];
 }
+
+export interface JobData {
+  id: number;
+  company_name: string;
+  location: {
+    city: string;
+    country: string;
+  };
+  is_remote: boolean;
+  experience: string;
+  role: string;
+  company_logo: string;
+}

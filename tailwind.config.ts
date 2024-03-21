@@ -19,6 +19,9 @@ const config: Config = {
           tab: "#CCC",
           "tab-active": "#F6E258",
           secondary: "#FCAAE5",
+          gray: "#D9D9D9",
+          "gray-light": "#C1C1C1",
+          "yellow-light": "#F3F6E6",
         },
         border: {
           DEFAULT: "#000",
@@ -34,6 +37,10 @@ const config: Config = {
           label: "#383A48",
           accent: "#1E4CA1",
           "sub-heading-2": "#232323",
+          "label-2": "#676769",
+        },
+        divider: {
+          DEFAULT: "#C4C4C4",
         },
       },
     },
