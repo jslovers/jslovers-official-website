@@ -1,7 +1,6 @@
-import { MarketingData } from "@/types";
-import speakerImage from "public/assets/hero_image_guest_v1.png";
+import { SpeakersData } from "@/types";
 
-export const SPEAKERS: MarketingData = {
+export const SPEAKERS: SpeakersData = {
   Navigation: [
     {
       title: "Home",
@@ -24,117 +23,167 @@ export const SPEAKERS: MarketingData = {
       href: "/about",
     },
   ],
-  Achievements: [
+  Speakers: [
     {
-      title: "10,000+ Memebers",
+      id: "10191",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "Tanisha Sabherwal",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
       description:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-      image: {
-        src: "/assets/achievement_1_v1.png",
-        width: 143,
-        height: 125,
-      },
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
     },
     {
-      title: "100+ Workshops",
+      id: "10192",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "John Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
       description:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-      image: {
-        src: "/assets/achievement_2_v1.png",
-        width: 158,
-        height: 125,
-      },
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
     },
     {
-      title: "100+ Sponsers",
+      id: "10193",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "Jane Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
       description:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-      image: {
-        src: "/assets/achievement_3_v1.png",
-        width: 194,
-        height: 125,
-      },
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
     },
     {
-      title: "100+ Speakers",
+      id: "10194",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "John Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
       description:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
+    },
+    {
+      id: "10195",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "Jane Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
+    },
+    {
+      id: "10196",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "John Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
+    },
+    {
+      id: "10197",
+      imageSrc: "/assets/hero_image_guest_v1.png",
+      name: "Jane Doe",
+      designation: "Frontend Engineer",
+      company: "JP Morgan",
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      socials: [
+        {
+          href: "https://www.github.com",
+          platform: "github",
+        },
+        {
+          href: "https://www.linkedin.com/",
+          platform: "linkedin",
+        },
+        {
+          href: "https://twitter.com/",
+          platform: "twitter",
+        },
+      ],
     },
   ],
-  PreviousTalks: [
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-    {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
-      image: {
-        src: "/assets/achievement_4_v1.png",
-        width: 223,
-        height: 125,
-      },
-      speaker: "Neha Sharma",
-    },
-  ],
-  WorkshopData: {
-    speakerImageSrc: speakerImage,
-    speakerName: "John Doe",
-    speakerRole: "Frontend Architect at Apple",
-    workshopTitle: "Introduction To Design System and Storybook",
-    workshopDate: " On 24th October at 05:00 AM IST",
-    workshopDescription:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-  },
 };

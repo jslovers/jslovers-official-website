@@ -56,3 +56,21 @@ export interface JobData {
   role: string;
   company_logo: string;
 }
+
+export interface Speaker {
+  id: string;
+  imageSrc: string;
+  name: string;
+  designation: string;
+  company: string;
+  description: string;
+  socials: {
+    href: string;
+    platform: string;
+  }[];
+}
+
+export interface SpeakersData {
+  Navigation: NavItem[];
+  Speakers: Speaker[];
+}
