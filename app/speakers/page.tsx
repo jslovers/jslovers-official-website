@@ -7,12 +7,14 @@ import SpeakerCard from "@/components/SpeakerCard";
 export default async function SpeakersIndexPage() {
   return (
     <>
-      <section className="container lg:flex lg:flex-row-reverse lg:justify-around lg:items-center">
+      <section className="container flex flex-col gap-9 items-center lg:flex-row-reverse lg:justify-around lg:gap-4">
         <Image
           src="/assets/speakers_hero_img.png"
           width={600}
           height={432}
           alt="Speakers"
+          priority
+          className="w-[312px] h-[224px] lg:w-[600px] lg:h-[432px]"
         />
 
         <div className="flex flex-col items-center gap-5 text-center max-w-[415px] lg:text-start lg:items-start">
