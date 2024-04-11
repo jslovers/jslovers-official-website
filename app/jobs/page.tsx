@@ -30,8 +30,8 @@ export default async function JobsPage() {
           veniam consequat sunt nostrud amet.
         </p>
         <div className="grid grid-cols-2 w-full gap-3 justify-items-center lg:flex lg:items-center lg:justify-center lg:gap-x-12 mt-10 mb-9 lg:mb-[110px]">
-          {[1, 2, 3, 4, 5, 6].map((t) => (
-            <Icons.amazon />
+          {[1, 2, 3, 4, 5, 6].map((_, i) => (
+            <Icons.amazon key={i} />
           ))}
         </div>
       </section>
