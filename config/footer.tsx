@@ -6,15 +6,15 @@ import { FooterData } from "@/types";
 export const FOOTER: FooterData = {
   QuickLinks: [
     { title: "Meetups", href: "#" },
-    { title: "Jobs", href: "#" },
-    { title: "Speakers", href: "#" },
+    { title: "Jobs", href: "/jobs" },
+    { title: "Speakers", href: "/speakers" },
     { title: "About", href: "#" },
     { title: "Contact", href: "#" },
   ],
   FollowUs: [
     { title: "Meetups", href: "#" },
-    { title: "Jobs", href: "#" },
-    { title: "Speakers", href: "#" },
+    { title: "Jobs", href: "/jobs" },
+    { title: "Speakers", href: "/speakers" },
     { title: "About", href: "#" },
     { title: "Contact", href: "#" },
   ],
