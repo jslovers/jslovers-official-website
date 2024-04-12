@@ -35,25 +35,25 @@ export const ABOUT: AboutData = {
       cards: [
         {
           title: "Helping newbie",
-          imgSrc: "",
+          imgSrc: "/assets/achievement_1_v1.png",
           description:
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
         {
           title: "Helping newbie",
-          imgSrc: "",
+          imgSrc: "/assets/achievement_2_v1.png",
           description:
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
         {
           title: "Helping newbie",
-          imgSrc: "",
+          imgSrc: "/assets/achievement_3_v1.png",
           description:
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
         {
           title: "Helping newbie",
-          imgSrc: "",
+          imgSrc: "/assets/achievement_4_v1.png",
           description:
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
@@ -140,17 +140,17 @@ export const ABOUT: AboutData = {
       ],
       faqs: [
         {
-          summaryBgColor: "bg-[#E0719E]",
+          summaryBgColor: "#E0719E",
           ques: "How it all started?",
           ans: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
         {
-          summaryBgColor: "bg-[#F6E049]",
+          summaryBgColor: "#F6E049",
           ques: "Our first meetup",
           ans: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },
         {
-          summaryBgColor: "bg-[#7FD6C2]",
+          summaryBgColor: "#7FD6C2",
           ques: "Making the friendly and helping culture",
           ans: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
         },

@@ -27,12 +27,13 @@ const Accordion: React.FC<AccordionProps> = ({
     >
       <h2>
         <button
-          className={`hover:cursor-pointer px-5 flex items-center justify-between w-full font-medium text-sm lg:text-xl ${summaryBgColor} ${
+          className={`hover:cursor-pointer px-5 flex items-center justify-between w-full font-medium text-sm lg:text-xl ${
             expanded
-              ? "rounded-tl-[15px] rounded-tr-[15px] py-3 border-b-2"
-              : `rounded-full py-2 ${summaryBgColor}`
+              ? "rounded-tl-[15px] rounded-tr-[15px] py-3 border-border border-b-2"
+              : `rounded-full py-2`
           }`}
           onClick={toggleExpand}
+          style={{ backgroundColor: expanded ? "" : summaryBgColor }}
         >
           <span className="">{title}</span>
           <span className={`ml-2 ${expanded ? "rotate-180" : ""}`}>

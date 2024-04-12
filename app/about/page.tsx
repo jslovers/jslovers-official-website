@@ -3,8 +3,6 @@ import { buttonVariants } from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import SpeakerCard from "@/components/SpeakerCard";
 import { ABOUT } from "@/config/about";
-import { MARKETING } from "@/config/marketing";
-import { SPEAKERS } from "@/config/speakers";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -13,7 +11,11 @@ const AboutPage = () => {
     <>
       <section className="isolate">
         <div className="container w-fit py-16 flex flex-col gap-6 items-center justify-center lg:gap-9">
-          <SectionHeader header="Who are we ?" className="w-min mx-auto" />
+          <SectionHeader
+            header="Who are we ?"
+            className="w-min mx-auto"
+            titleClassName="text-center"
+          />
           <p className="max-w-[871px] mx-auto font-normal text-base text-center text-text-sub-heading lg:font-medium lg:text-2xl">
             He Amet minim mollit non deserunt ullamco est sit aliqua dolor do
             amet sint. Velit officia consequat duis enim velit mollit.
@@ -43,49 +45,31 @@ const AboutPage = () => {
       <section className="isolate">
         <div className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
           <SectionHeader
-            header={`${ABOUT.About.team.title}`}
-            className="w-min mx-auto"
-          />
-          <p className="max-w-[871px] mx-auto font-normal text-base text-center text-text-sub-heading lg:font-medium lg:text-2xl">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-
-          <div className="overflow-x-auto snap-x max-w-full flex gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3 xl:grid-cols-4">
-            {ABOUT.About.team.members.map((speakerProps) => (
-              <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="isolate">
-        <div className="container py-8">
-          <SectionHeader
             header={`${ABOUT.About.purpose.title}`}
             className="w-min mx-auto"
+            titleClassName="text-center"
           />
-          <div className="overflow-x-auto snap-x max-w-full flex gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3 xl:grid-cols-4">
-            {MARKETING.Achievements.map((achievement) => {
+          <div className="overflow-x-auto snap-x w-full flex gap-7 py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
+            {ABOUT.About.purpose.cards.map((purpose) => {
               return (
                 <div
-                  key={achievement.title}
-                  className="min-w-[256px] flex flex-col"
+                  key={purpose.imgSrc}
+                  className="min-w-64 max-w-64 flex flex-col"
                 >
                   <dt className="text-xl xl:text-2xl text-center font-semibold">
-                    {achievement.title}
+                    {purpose.title}
                   </dt>
                   <dd className="flex flex-col items-center">
                     <div className="h-40 flex items-center">
                       <Image
-                        src={achievement.image.src}
-                        alt={achievement.title}
-                        width={achievement.image.width}
-                        height={achievement.image.height}
+                        src={purpose.imgSrc}
+                        alt={purpose.title}
+                        width={115}
+                        height={115}
                       />
                     </div>
-                    <p className="text-sm lg:text-base text-center text-text-paragraph">
-                      {achievement.description}
+                    <p className="text-sm lg:text-base lg:font-medium text-center text-text-paragraph">
+                      {purpose.description}
                     </p>
                   </dd>
                 </div>
@@ -95,20 +79,41 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <section className="isolate">
+        <div className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
+          <SectionHeader
+            header={`${ABOUT.About.team.title}`}
+            className="w-min mx-auto"
+            titleClassName="text-center"
+          />
+          <p className="max-w-[871px] mx-auto font-normal text-base text-center text-text-sub-heading lg:hidden lg:font-medium lg:text-2xl">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit.
+          </p>
+
+          <div className="overflow-x-auto snap-x w-full flex gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
+            {ABOUT.About.team.members.map((speakerProps) => (
+              <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
         <SectionHeader
           header={`${ABOUT.About.story.title}`}
           className="w-min mx-auto"
+          titleClassName="text-center"
         />
 
-        <div className="overflow-x-auto snap-x max-w-full flex gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3 xl:grid-cols-4">
-          {ABOUT.About.story.images.map((image, index) => {
-            return (
+        <div className="w-full flex flex-col gap-4 lg:flex-row-reverse lg:gap-11 items-center">
+          <div className="overflow-x-auto snap-x max-w-full flex gap-7 py-5 lg:w-[50%]">
+            {ABOUT.About.story.images.map((image, i) => (
               <div
-                key={index}
-                className="scroll-ml-6 snap-center inline-flex flex-col items-center gap-2 lg:items-start lg:mx-auto"
+                key={i}
+                className="scroll-ml-6 snap-center inline-flex flex-shrink-0 flex-col items-center gap-2 lg:items-start lg:mx-auto"
               >
-                <div className="w-[251px] relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
+                <div className="relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
                   <Image
                     src={image}
                     width={204}
@@ -123,19 +128,19 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
 
-        <div className="flex flex-col items-center gap-1 lg:gap-3">
-          {ABOUT.About.story.faqs.map((faq, i) => (
-            <Accordion
-              key={faq.ques}
-              summaryBgColor={faq.summaryBgColor}
-              title={faq.ques}
-              content={faq.ans}
-            />
-          ))}
+          <div className="flex flex-col items-center gap-1 lg:gap-3 lg:w-[50%]">
+            {ABOUT.About.story.faqs.map((faq, i) => (
+              <Accordion
+                key={faq.ques}
+                summaryBgColor={faq.summaryBgColor}
+                title={faq.ques}
+                content={faq.ans}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </>
