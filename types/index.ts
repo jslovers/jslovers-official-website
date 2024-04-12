@@ -62,7 +62,7 @@ export interface Speaker {
   imageSrc: string;
   name: string;
   designation: string;
-  company: string;
+  company?: string;
   description: string;
   socials: {
     href: string;
@@ -73,4 +73,49 @@ export interface Speaker {
 export interface SpeakersData {
   Navigation: NavItem[];
   Speakers: Speaker[];
+}
+
+export interface About {
+  hero: {
+    title: string;
+    description: string;
+    ctaLink: string;
+  };
+  purpose: {
+    title: string;
+    cards: {
+      title: string;
+      imgSrc: string;
+      description: string;
+    }[];
+  };
+  team: {
+    title: string;
+    members: Speaker[];
+    // members: {
+    //   id: string;
+    //   imgSrc: string;
+    //   designation: string;
+    //   name: string;
+    //   description: string;
+    //   social: {
+    //     href: string;
+    //     platform: string;
+    //   }[];
+    // }[];
+  };
+  story: {
+    title: string;
+    images: string[];
+    faqs: {
+      summaryBgColor: string;
+      ques: string;
+      ans: string;
+    }[];
+  };
+}
+
+export interface AboutData {
+  Navigation: NavItem[];
+  About: About;
 }

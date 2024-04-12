@@ -26,7 +26,9 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
           {speaker.name}
         </div>
         <p className="font-normal text-black text-base leading-[normal] lg:text-lg">
-          {`${speaker.designation}, ${speaker.company}`}
+          {`${speaker.designation}${
+            speaker.company ? `, ${speaker.company}` : ""
+          }`}
         </p>
         <p className="w-[251px] font-medium text-[#383a48] text-xs leading-[normal] lg:text-sm">
           {speaker.description}
