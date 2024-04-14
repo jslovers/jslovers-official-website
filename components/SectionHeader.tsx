@@ -22,7 +22,7 @@ const SectionHeader = ({
   return (
     <div className={cn("flex flex-col gap-1 lg:gap-4", className)}>
       <h3
-        className={cn("font-semibold text-2xl lg:text-[40px]", titleClassName)}
+        className={cn("font-semibold text-text-sub-heading text-2xl lg:text-[40px]", titleClassName)}
       >
         {header}
       </h3>

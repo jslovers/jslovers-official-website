@@ -26,10 +26,10 @@ const AboutPage = () => {
             type="submit"
             className={cn(
               buttonVariants(),
-              "border-2 border-border justify-between text-base font-medium h-[50px] lg:border-4 lg:text-xl lg:py-8 lg:rounded-[10px]"
+              "border-2 border-border justify-between text-base font-medium h-[50px] lg:border-4 lg:text-xl lg:py-7 lg:rounded-[10px]"
             )}
           >
-            <span>Learn more </span>
+            <span>Learn more</span>
             <Image
               src="/assets/icons/right_arrow.svg"
               width={17}
@@ -141,6 +141,59 @@ const AboutPage = () => {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="isolate bg-background-secondary mt-5 lg:mt-12">
+        <div className="container max-w-2xl mx-auto text-center py-8 lg:py-10">
+          <h2 className="text-2xl lg:text-[40px] font-semibold leading-tight">
+            Join JsLovers for free
+          </h2>
+          <p className="mt-3 text-base lg:text-lg text-text-paragraph">
+            Connect with developers from everywhere around the world. Make
+            strong relationship with other members , boost your network and
+            learn from each other.
+          </p>
+          <p className="mt-3 text-sm lg:text-xl font-semibold text-text-accent">
+            Just enter your email below to join
+          </p>
+
+          <form className="mt-6 flex items-center">
+            <label htmlFor="email-address" className="sr-only">
+              Email address
+            </label>
+            <div className="relative flex flex-col lg:flex-row flex-grow space-y-4 lg:space-y-0">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autoComplete="email"
+                placeholder="Enter your email"
+                required
+                className="flex-auto w-full rounded-lg border-0 text-sm lg:text-lg ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg"
+              />
+              <button
+                type="submit"
+                className={cn(
+                  buttonVariants({
+                    size: "lg",
+                  }),
+                  "border-solid border-2 border-border text-sm lg:border-[3px] lg:absolute lg:inset-y-0 lg:right-0 lg:text-lg h-12 lg:h-16 justify-between "
+                )}
+              >
+                <span>Join for free</span>
+
+                <Image
+                  src="/assets/icons/right_arrow.svg"
+                  width={17}
+                  height={17}
+                  alt="right-arrow"
+                  className="ml-2 w-[14px] h-[14px] lg:ml-3 lg:w-[17px] lg:h-[17px]"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </>
