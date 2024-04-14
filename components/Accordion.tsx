@@ -27,7 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({
     >
       <h2>
         <button
-          className={`hover:cursor-pointer px-5 flex items-center justify-between w-full font-medium text-sm lg:text-2xl lg:px-12 ${
+          className={`hover:cursor-pointer px-5 flex items-center justify-between w-full font-medium text-left text-sm lg:text-2xl lg:px-12 ${
             expanded
               ? "rounded-tl-[15px] rounded-tr-[15px] py-3 border-border border-b-2"
               : `rounded-full py-2 lg:py-4`
@@ -38,7 +38,7 @@ const Accordion: React.FC<AccordionProps> = ({
           <span>{title}</span>
           <span
             className={`flex justify-center items-center ml-2 h-1 w-3 md:h-2 md:w-4 lg:h-4 lg:w-7 ${
-              expanded ? "rotate-180" : ""
+              expanded ? "" : "rotate-180"
             }`}
           >
             <svg
@@ -59,7 +59,7 @@ const Accordion: React.FC<AccordionProps> = ({
       </h2>
 
       <div
-        className={`grid text-xs overflow-hidden lg:text-xs ${
+        className={`grid text-xs overflow-hidden lg:text-base ${
           expanded
             ? "grid-rows-[1fr] opacity-100 px-3 py-4 lg:px-12"
             : "grid-rows-[0fr] opacity-0"
