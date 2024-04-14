@@ -133,10 +133,10 @@ export const ABOUT: AboutData = {
     story: {
       title: "Our Story",
       images: [
-        "/assets/hero_image_guest_v1.png",
-        "/assets/hero_image_guest_v1.png",
-        "/assets/hero_image_guest_v1.png",
-        "/assets/hero_image_guest_v1.png",
+        "/assets/story_image.png",
+        "/assets/story_image.png",
+        "/assets/story_image.png",
+        "/assets/story_image.png",
       ],
       faqs: [
         {

@@ -99,7 +99,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
+      <section className="py-8 flex flex-col gap-6 items-center justify-center lg:container lg:gap-9">
         <SectionHeader
           header={`${ABOUT.About.story.title}`}
           className="w-min mx-auto"
@@ -107,7 +107,7 @@ const AboutPage = () => {
         />
 
         <div className="w-full flex flex-col gap-4 lg:flex-row-reverse lg:gap-11 items-center">
-          <div className="overflow-x-auto snap-x max-w-full flex gap-7 py-5 lg:w-[50%]">
+          <div className="px-4 overflow-x-auto snap-x max-w-full flex gap-7 py-5 lg:w-[50%]">
             {ABOUT.About.story.images.map((image, i) => (
               <div
                 key={i}
@@ -116,22 +116,22 @@ const AboutPage = () => {
                 <div className="relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
                   <Image
                     src={image}
-                    width={204}
-                    height={204}
+                    width={381}
+                    height={226}
                     alt="Speaker Image"
-                    className="object-cover w-[174px] h-[174px] lg:w-[204px] lg:h-[204px] rounded-[10px]"
+                    className="object-cover w-[250px] h-[148px] lg:w-[381px] lg:h-[226px] rounded-[10px]"
                     loading="lazy"
                   />
 
                   <div className="-z-[1] absolute top-[12px] left-[12px] p-8 rounded-[10px] border-[5px] rounded-tr-none rounded-bl-none border-l-0 border-t-0 border-solid border-black">
-                    <div className="w-[174px] h-[174px] lg:w-[204px] lg:h-[204px]" />
+                    <div className="w-[250px] h-[148px] lg:w-[381px] lg:h-[226px]" />
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col items-center gap-1 lg:gap-3 lg:w-[50%]">
+          <div className="container lg:px-0 flex flex-col items-center gap-1 lg:gap-3 lg:w-[50%]">
             {ABOUT.About.story.faqs.map((faq, i) => (
               <Accordion
                 key={faq.ques}
