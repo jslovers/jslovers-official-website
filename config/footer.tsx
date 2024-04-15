@@ -8,14 +8,14 @@ export const FOOTER: FooterData = {
     { title: "Meetups", href: "#" },
     { title: "Jobs", href: "/jobs" },
     { title: "Speakers", href: "/speakers" },
-    { title: "About", href: "#" },
+    { title: "About", href: "/about" },
     { title: "Contact", href: "#" },
   ],
   FollowUs: [
     { title: "Meetups", href: "#" },
     { title: "Jobs", href: "/jobs" },
     { title: "Speakers", href: "/speakers" },
-    { title: "About", href: "#" },
+    { title: "About", href: "/about" },
     { title: "Contact", href: "#" },
   ],
   Sponsors: [
