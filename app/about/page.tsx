@@ -1,32 +1,67 @@
+"use client";
+
 import Accordion from "@/components/Accordion";
 import { buttonVariants } from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import SpeakerCard from "@/components/SpeakerCard";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { ABOUT } from "@/config/about";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const AboutPage = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   return (
     <>
       <section className="isolate">
-        <div className="container w-fit py-16 flex flex-col gap-6 items-center justify-center lg:gap-9">
+        <div className="container flex w-fit flex-col items-center justify-center gap-6 py-16 lg:gap-9">
           <SectionHeader
             header="Who are we ?"
-            className="w-min mx-auto"
+            className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <p className="max-w-[871px] mx-auto font-normal text-base text-center text-text-sub-heading lg:font-medium lg:text-2xl">
+          <p className="text-text-sub-heading mx-auto max-w-[871px] text-center text-base font-normal lg:text-2xl lg:font-medium">
             He Amet minim mollit non deserunt ullamco est sit aliqua dolor do
             amet sint. Velit officia consequat duis enim velit mollit.
             Exercitation veniam consequat sunt nostrud amet.
           </p>
 
+          <Button variant="jsl">
+            Learn more
+            <ArrowRight className="ml-2 h-5 w-5 lg:ml-3 lg:h-6 lg:w-6" />
+          </Button>
+
           <button
             type="submit"
             className={cn(
               buttonVariants(),
-              "border-2 border-border justify-between text-base font-medium h-[50px] lg:border-4 lg:text-xl lg:py-7 lg:rounded-[10px]"
+              "h-[50px] bg-babyBlueEyes justify-between border-2 border-border text-base font-medium lg:rounded-[10px] lg:border-4 lg:py-7 lg:text-xl",
             )}
           >
             <span>Learn more</span>
@@ -35,7 +70,7 @@ const AboutPage = () => {
               width={17}
               height={17}
               alt="right-arrow"
-              className="ml-2 w-[14px] h-[14px] lg:ml-3 lg:w-[17px] lg:h-[17px]"
+              className="ml-2 h-[14px] w-[14px] lg:ml-3 lg:h-[17px] lg:w-[17px]"
               loading="lazy"
             />
           </button>
@@ -43,24 +78,24 @@ const AboutPage = () => {
       </section>
 
       <section className="isolate">
-        <div className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
+        <div className="container flex flex-col items-center justify-center gap-6 py-8 lg:gap-9">
           <SectionHeader
             header={`${ABOUT.About.purpose.title}`}
-            className="w-min mx-auto"
+            className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <div className="overflow-x-auto snap-x w-full flex gap-7 py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
+          <div className="flex w-full snap-x gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
             {ABOUT.About.purpose.cards.map((purpose) => {
               return (
                 <div
                   key={purpose.imgSrc}
-                  className="min-w-64 max-w-64 flex flex-col"
+                  className="flex min-w-64 max-w-64 flex-col"
                 >
-                  <dt className="text-xl xl:text-2xl text-center font-semibold">
+                  <dt className="text-center text-xl font-semibold xl:text-2xl">
                     {purpose.title}
                   </dt>
                   <dd className="flex flex-col items-center">
-                    <div className="h-40 flex items-center">
+                    <div className="flex h-40 items-center">
                       <Image
                         src={purpose.imgSrc}
                         alt={purpose.title}
@@ -68,7 +103,7 @@ const AboutPage = () => {
                         height={115}
                       />
                     </div>
-                    <p className="text-sm lg:text-base lg:font-medium text-center text-text-paragraph">
+                    <p className="text-text-paragraph text-center text-sm lg:text-base lg:font-medium">
                       {purpose.description}
                     </p>
                   </dd>
@@ -80,18 +115,18 @@ const AboutPage = () => {
       </section>
 
       <section className="isolate">
-        <div className="container py-8 flex flex-col gap-6 items-center justify-center lg:gap-9">
+        <div className="container flex flex-col items-center justify-center gap-6 py-8 lg:gap-9">
           <SectionHeader
             header={`${ABOUT.About.team.title}`}
-            className="w-min mx-auto"
+            className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <p className="max-w-[871px] mx-auto font-normal text-base text-center text-text-sub-heading lg:hidden lg:font-medium lg:text-2xl">
+          <p className="text-text-sub-heading mx-auto max-w-[871px] text-center text-base font-normal lg:hidden lg:text-2xl lg:font-medium">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.
           </p>
 
-          <div className="overflow-x-auto snap-x w-full flex gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
+          <div className="flex w-full snap-x gap-7 overflow-x-auto py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
             {ABOUT.About.team.members.map((speakerProps) => (
               <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
             ))}
@@ -99,39 +134,53 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-8 flex flex-col gap-6 items-center justify-center lg:container lg:gap-9">
+      <section className="flex flex-col items-center justify-center gap-6 py-8 lg:container lg:gap-9">
         <SectionHeader
           header={`${ABOUT.About.story.title}`}
-          className="w-min mx-auto"
+          className="mx-auto w-min"
           titleClassName="text-center"
         />
 
-        <div className="w-full flex flex-col gap-4 lg:flex-row-reverse lg:gap-11 items-center">
-          <div className="px-4 overflow-x-auto snap-x max-w-full flex gap-7 py-5 lg:w-[50%]">
-            {ABOUT.About.story.images.map((image, i) => (
-              <div
-                key={i}
-                className="scroll-ml-6 snap-center inline-flex flex-shrink-0 flex-col items-center gap-2 lg:items-start lg:mx-auto"
-              >
-                <div className="relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
-                  <Image
-                    src={image}
-                    width={381}
-                    height={226}
-                    alt="Speaker Image"
-                    className="object-cover w-[250px] h-[148px] lg:w-[381px] lg:h-[226px] rounded-[10px]"
-                    loading="lazy"
-                  />
+        <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:gap-11">
+          <div className="flex max-w-full flex-col items-center px-4 py-5 lg:w-[50%]">
+            <Carousel setApi={setApi} className="w-full">
+              <CarouselContent>
+                {ABOUT.About.story.images.map((image, i) => (
+                  <CarouselItem key={i}>
+                    <div className="relative h-auto flex-[0_0_100%]" key={i}>
+                      <div
+                        key={i}
+                        className="flex flex-shrink-0 snap-center scroll-ml-6 flex-col items-center gap-2"
+                      >
+                        <div className="relative rounded-[10px] rounded-bl-none rounded-tr-none border-[5px] border-l-0 border-t-0 border-solid border-black pb-3 pr-3">
+                          <div className="absolute right-0 top-0 h-3 outline outline-[6px] outline-white" />
+                          <div className="absolute bottom-0 left-0 w-3 outline outline-[6px] outline-white" />
 
-                  <div className="-z-[1] absolute top-[12px] left-[12px] p-8 rounded-[10px] border-[5px] rounded-tr-none rounded-bl-none border-l-0 border-t-0 border-solid border-black">
-                    <div className="w-[250px] h-[148px] lg:w-[381px] lg:h-[226px]" />
-                  </div>
-                </div>
-              </div>
-            ))}
+                          <div className="flex flex-col items-center justify-center rounded-[10px] border-[5px] border-solid border-black p-8">
+                            <Image
+                              src={image}
+                              width={381}
+                              height={226}
+                              alt="Speaker Image"
+                              className="w-[250px] rounded-[10px] lg:w-[381px]"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+            <div className="w-fit py-2 text-center text-sm text-muted-foreground">
+              {current} of {count}
+            </div>
           </div>
 
-          <div className="container lg:px-0 flex flex-col items-center gap-1 lg:gap-3 lg:w-[50%]">
+          <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
             {ABOUT.About.story.faqs.map((faq, i) => (
               <Accordion
                 key={faq.ques}
@@ -144,17 +193,17 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="isolate bg-background-secondary mt-5 lg:mt-12">
-        <div className="container max-w-2xl mx-auto text-center py-8 lg:py-10">
-          <h2 className="text-2xl lg:text-[40px] font-semibold leading-tight">
+      <section className="isolate mt-5 bg-lavenderRose lg:mt-12">
+        <div className="container mx-auto max-w-2xl py-8 text-center lg:py-10">
+          <h2 className="text-2xl font-semibold leading-tight lg:text-[40px]">
             Join JsLovers for free
           </h2>
-          <p className="mt-3 text-base lg:text-lg text-text-paragraph">
+          <p className="text-text-paragraph mt-3 text-base lg:text-lg">
             Connect with developers from everywhere around the world. Make
             strong relationship with other members , boost your network and
             learn from each other.
           </p>
-          <p className="mt-3 text-sm lg:text-xl font-semibold text-text-accent">
+          <p className="mt-3 text-sm font-semibold text-cyanCobaltBlue lg:text-xl">
             Just enter your email below to join
           </p>
 
@@ -162,7 +211,7 @@ const AboutPage = () => {
             <label htmlFor="email-address" className="sr-only">
               Email address
             </label>
-            <div className="relative flex flex-col lg:flex-row flex-grow space-y-4 lg:space-y-0">
+            <div className="relative flex flex-grow flex-col space-y-4 lg:flex-row lg:space-y-0">
               <input
                 type="email"
                 name="email"
@@ -170,28 +219,17 @@ const AboutPage = () => {
                 autoComplete="email"
                 placeholder="Enter your email"
                 required
-                className="flex-auto w-full rounded-lg border-0 text-sm lg:text-lg ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg"
+                className="ring-spanishGray h-12 w-full flex-auto rounded-lg border-0 pl-6 text-sm ring-2 ring-inset placeholder:text-sm lg:h-16 lg:text-lg lg:placeholder:text-lg"
               />
-              <button
-                type="submit"
-                className={cn(
-                  buttonVariants({
-                    size: "lg",
-                  }),
-                  "border-solid border-2 border-border text-sm lg:border-[3px] lg:absolute lg:inset-y-0 lg:right-0 lg:text-lg h-12 lg:h-16 justify-between "
-                )}
-              >
-                <span>Join for free</span>
 
-                <Image
-                  src="/assets/icons/right_arrow.svg"
-                  width={17}
-                  height={17}
-                  alt="right-arrow"
-                  className="ml-2 w-[14px] h-[14px] lg:ml-3 lg:w-[17px] lg:h-[17px]"
-                  loading="lazy"
-                />
-              </button>
+              <Button
+                variant="jsl"
+                type="submit"
+                className="lg:absolute lg:inset-y-0 lg:right-0 lg:h-16 lg:border-[3px]"
+              >
+                Join for free
+                <ArrowRight className="ml-2 h-5 w-5 lg:ml-3 lg:h-6 lg:w-6" />
+              </Button>
             </div>
           </form>
         </div>
