@@ -49,9 +49,9 @@ const Accordion = ({
               <path
                 d="M2 16L16 2L30 16"
                 stroke="black"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </span>

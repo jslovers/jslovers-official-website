@@ -14,6 +14,7 @@ export const FeatureCard = ({ feature }: { feature: PurposeCards }) => {
             alt={feature.title}
             width={115}
             height={115}
+            className="w-[115px] h-[115px]"
           />
         </div>
         <p className="text-text-paragraph text-center text-sm lg:text-base lg:font-medium">
