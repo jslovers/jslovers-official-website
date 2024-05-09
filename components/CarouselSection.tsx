@@ -46,13 +46,7 @@ const CarouselSection = ({
   }, [api]);
 
   if (gridOnLg && screenSize.width >= 1024) {
-    return (
-      <>
-        {/* <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3"> */}
-          {gridChildren}
-        {/* </div> */}
-      </>
-    );
+    return <>{gridChildren}</>;
   }
 
   return (
