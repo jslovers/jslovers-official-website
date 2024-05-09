@@ -5,7 +5,7 @@ import React from "react";
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   return (
-    <div className="scroll-ml-6 snap-center inline-flex flex-col items-center gap-2 lg:items-start lg:mx-auto">
+    <div className="inline-flex flex-col items-center gap-2 lg:items-start lg:mx-auto">
       <div className="relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
         <Image
           src={speaker.imageSrc}
