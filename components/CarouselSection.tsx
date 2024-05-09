@@ -45,7 +45,7 @@ const CarouselSection = ({
     });
   }, [api]);
 
-  if (gridOnLg && screenSize.width >= 1024) {
+  if (gridOnLg && screenSize?.width && screenSize?.width >= 1024) {
     return <>{gridChildren}</>;
   }
 
