@@ -8,11 +8,11 @@ interface AccordionProps {
   content: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion = ({
   summaryBgColor,
   title,
   content,
-}) => {
+}: AccordionProps): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -27,9 +27,9 @@ const Accordion: React.FC<AccordionProps> = ({
     >
       <h2>
         <button
-          className={`hover:cursor-pointer px-5 flex items-center justify-between w-full font-medium text-left text-sm lg:text-2xl lg:px-12 ${
+          className={`flex w-full items-center justify-between px-5 text-left text-sm font-medium hover:cursor-pointer lg:px-12 lg:text-2xl ${
             expanded
-              ? "rounded-tl-[15px] rounded-tr-[15px] py-3 border-border border-b-2"
+              ? "rounded-tl-[15px] rounded-tr-[15px] border-b-2 border-border py-3"
               : `rounded-full py-2 lg:py-4`
           }`}
           onClick={toggleExpand}
@@ -37,7 +37,7 @@ const Accordion: React.FC<AccordionProps> = ({
         >
           <span>{title}</span>
           <span
-            className={`flex justify-center items-center ml-2 h-1 w-3 md:h-2 md:w-4 lg:h-4 lg:w-7 ${
+            className={`ml-2 flex h-1 w-3 items-center justify-center md:h-2 md:w-4 lg:h-4 lg:w-7 ${
               expanded ? "" : "rotate-180"
             }`}
           >
@@ -49,9 +49,9 @@ const Accordion: React.FC<AccordionProps> = ({
               <path
                 d="M2 16L16 2L30 16"
                 stroke="black"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </span>
@@ -59,9 +59,9 @@ const Accordion: React.FC<AccordionProps> = ({
       </h2>
 
       <div
-        className={`grid text-xs overflow-hidden lg:text-base ${
+        className={`grid overflow-hidden text-xs lg:text-base ${
           expanded
-            ? "grid-rows-[1fr] opacity-100 px-3 py-4 lg:px-12"
+            ? "grid-rows-[1fr] px-3 py-4 opacity-100 lg:px-12"
             : "grid-rows-[0fr] opacity-0"
         }`}
       >

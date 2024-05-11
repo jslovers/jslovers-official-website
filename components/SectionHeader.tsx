@@ -1,5 +1,5 @@
-import { cn, generateUnderlineSVGs } from "@/lib/utils";
-import React from "react";
+import { generateUnderlineSVGs } from "@/lib/helpers";
+import { cn } from "@/lib/utils";
 
 // TODO: add appropriate svg height and width for mobile devices
 
@@ -22,11 +22,14 @@ const SectionHeader = ({
   return (
     <div className={cn("flex flex-col gap-1 lg:gap-4", className)}>
       <h3
-        className={cn("font-semibold text-text-sub-heading text-2xl lg:text-[40px]", titleClassName)}
+        className={cn(
+          "text-text-sub-heading text-2xl font-semibold lg:text-[40px]",
+          titleClassName,
+        )}
       >
         {header}
       </h3>
-      <div className="hidden lg:flex gap-2">
+      <div className="hidden gap-2 lg:flex">
         {generateUnderlineSVGs(desktopWidths, desktopHeights)}
       </div>
       <div className="flex gap-1 lg:hidden ">

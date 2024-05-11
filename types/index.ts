@@ -70,6 +70,12 @@ export interface Speaker {
   }[];
 }
 
+export interface PurposeCards {
+  title: string;
+  imgSrc: string;
+  description: string;
+}
+
 export interface SpeakersData {
   Navigation: NavItem[];
   Speakers: Speaker[];
@@ -83,26 +89,11 @@ export interface About {
   };
   purpose: {
     title: string;
-    cards: {
-      title: string;
-      imgSrc: string;
-      description: string;
-    }[];
+    cards: PurposeCards[];
   };
   team: {
     title: string;
     members: Speaker[];
-    // members: {
-    //   id: string;
-    //   imgSrc: string;
-    //   designation: string;
-    //   name: string;
-    //   description: string;
-    //   social: {
-    //     href: string;
-    //     platform: string;
-    //   }[];
-    // }[];
   };
   story: {
     title: string;

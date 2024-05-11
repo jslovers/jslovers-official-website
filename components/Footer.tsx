@@ -9,7 +9,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cn(className)}>
       <h5 className="sr-only">Footer</h5>
-      <div className="container px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32 lg:pb-16">
+      <div className="container px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pb-16 lg:pt-32">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           <div className="space-y-4">
             <Icons.logo />
