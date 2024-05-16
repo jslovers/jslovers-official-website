@@ -83,3 +83,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'TruenoBlackOutline';
+  src: url('../public/fonts/TruenoBlackOutline.woff2') format('woff2');
+}
+
+.speakers-heading,
+.jobs-heading {
+  font-family: 'TruenoBlackOutline', sans-serif;
+}
