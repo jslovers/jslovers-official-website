@@ -16,7 +16,7 @@ export default async function JobsPage() {
   return (
     <div>
       <section className="flex items-center justify-center flex-col mt-20 lg:mt-[108px]">
-        <h1 className="jobs-heading text-5xl lg:text-7xl">Jobs</h1>
+        <h1 className="page-heading text-5xl lg:text-7xl">Jobs</h1>
         <p className="max-w-xl text-center mt-8 text-[20px] text-text-paragraph">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation

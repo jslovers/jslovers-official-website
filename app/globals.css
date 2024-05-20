@@ -89,7 +89,6 @@
   src: url('../public/fonts/TruenoBlackOutline.woff2') format('woff2');
 }
 
-.speakers-heading,
-.jobs-heading {
+.page-heading {
   font-family: 'TruenoBlackOutline', sans-serif;
 }
