@@ -18,13 +18,7 @@ export default async function SpeakersIndexPage() {
         />
 
         <div className="flex flex-col items-center gap-5 text-center max-w-[415px] lg:text-start lg:items-start">
-          <Image
-            src="/assets/speaker_page_heading.svg"
-            width={388}
-            height={88}
-            alt="Speakers"
-            className="w-[268px] h-[56px] lg:w-[388px] lg:h-[88px]"
-          />
+          <h1 className="page-heading text-5xl lg:text-7xl">Speakers</h1>
 
           <p className="max-w-xl text-base font-medium lg:text-lg text-text-paragraph">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

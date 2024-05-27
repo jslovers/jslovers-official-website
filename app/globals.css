@@ -83,3 +83,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'TruenoBlackOutline';
+  src: url('../public/fonts/TruenoBlackOutline.woff2') format('woff2');
+}
+
+.page-heading {
+  font-family: 'TruenoBlackOutline', sans-serif;
+}
