@@ -12,7 +12,7 @@ export function MainNav({ items }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <h1>
         <Link href="/">
-          <span className="sr-only">JSLovers</span>
+          <span className="sr-only">JS Lovers</span>
           <Icons.logo />
         </Link>
       </h1>
