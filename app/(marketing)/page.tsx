@@ -4,12 +4,13 @@ import Workshop from "@/components/Workshop";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 import { MARKETING } from "@/config/marketing";
+import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
 export default async function IndexPage() {
   return (
     <>
       <section className="isolate">
-        <div className="container py-16">
+        <div className="container py-4">
           <div className="max-w-2xl justify-between lg:flex lg:max-w-full lg:items-center gap-x-20">
             <Workshop
               workshopData={MARKETING.WorkshopData}
@@ -87,7 +88,7 @@ export default async function IndexPage() {
       <section className="isolate">
         <div className="container py-16 space-y-16 flex flex-col justify-center items-center">
           <SectionHeader header="Previous talks" className="w-min" />
-          <div className="carousel carousel-center max-w-full flex justify-between gap-7 xl:gap-8 py-5">
+          <div className="carousel carousel-center max-w-full flex flex-wrap justify-between gap-7 xl:gap-8 py-5">
             {MARKETING.PreviousTalks.map((previousTalk, index) => {
               return (
                 <div
@@ -237,8 +238,8 @@ export default async function IndexPage() {
       </section>
 
       {/* todo: make a dumb component out of it */}
-
-      <section className="isolate bg-lavenderRose">
+      <SignupForMeetupCard />
+      {/* <section className="isolate bg-lavenderRose">
         <div className="container max-w-2xl mx-auto py-16 text-center">
           <h2 className="text-2xl lg:text-[40px] font-semibold leading-tight">
             Introduction To Design System and Storybook
@@ -280,7 +281,7 @@ export default async function IndexPage() {
             </div>
           </form>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

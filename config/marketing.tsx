@@ -26,7 +26,7 @@ export const MARKETING: MarketingData = {
   ],
   Achievements: [
     {
-      title: "10,000+ Memebers",
+      title: "10,000+ Members",
       description:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
       image: {
@@ -75,47 +75,47 @@ export const MARKETING: MarketingData = {
         width: 223,
         height: 125,
       },
-      speaker: "Neha Sharma",
+      speaker: "Arun Singh",
     },
     {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
+      date: "01 June 2022",
+      title: "NextJS workshop",
       image: {
         src: "/assets/achievement_4_v1.png",
         width: 223,
         height: 125,
       },
-      speaker: "Neha Sharma",
+      speaker: "Arun Sharma",
     },
     {
-      date: "20 May 2021",
-      title: "Introduction to ReactJs",
+      date: "14 Jan 2024",
+      title: "Webworkers: Workshop",
       image: {
         src: "/assets/achievement_4_v1.png",
         width: 223,
         height: 125,
       },
-      speaker: "Neha Sharma",
+      speaker: "Prateek",
     },
     {
       date: "20 May 2021",
-      title: "Introduction to ReactJs",
+      title: "TypeScript",
       image: {
         src: "/assets/achievement_4_v1.png",
         width: 223,
         height: 125,
       },
-      speaker: "Neha Sharma",
+      speaker: "Ekaspreet Singh",
     },
     {
       date: "20 May 2021",
-      title: "Introduction to ReactJs",
+      title: "AWS for Front-end Developers",
       image: {
         src: "/assets/achievement_4_v1.png",
         width: 223,
         height: 125,
       },
-      speaker: "Neha Sharma",
+      speaker: "Vrukshali",
     },
     {
       date: "20 May 2021",
@@ -132,7 +132,7 @@ export const MARKETING: MarketingData = {
     speakerImageSrc: speakerImage,
     speakerName: "John Doe",
     speakerRole: "Frontend Architect at Apple",
-    workshopTitle: "Introduction To Design System and Storybook",
+    workshopTitle: "Introduction to Design System and Storybook",
     workshopDate: " On 24th October at 05:00 AM IST",
     workshopDescription:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",

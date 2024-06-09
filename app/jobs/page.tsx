@@ -11,11 +11,12 @@ import {
 } from "@/lib/mock_data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
 export default async function JobsPage() {
   return (
     <div>
-      <section className="flex items-center justify-center flex-col mt-20 lg:mt-[108px]">
+      <section className="flex items-center justify-center flex-col mt-20 lg:mt-[10px]">
         <h1 className="page-heading text-5xl lg:text-7xl">Jobs</h1>
         <p className="max-w-xl text-center mt-8 text-[20px] text-text-paragraph">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -92,7 +93,8 @@ export default async function JobsPage() {
           </button>
         </div>
       </section>
-      <section className="bg-background-yellow-light flex flex-col justify-center items-center">
+      <SignupForMeetupCard />
+      {/* <section className="bg-background-yellow-light flex flex-col justify-center items-center">
         <p className=" text-2xl lg:text-[40px] font-semibold text-center mt-10 max-w-xs lg:max-w-3xl mb-5">
           Want to brushUp your learning and get ready for interviews ?
         </p>
@@ -117,7 +119,7 @@ export default async function JobsPage() {
             loading="lazy"
           />
         </button>
-      </section>
+      </section> */}
     </div>
   );
 }
