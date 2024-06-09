@@ -238,7 +238,7 @@ export default async function IndexPage() {
 
       {/* todo: make a dumb component out of it */}
 
-      <section className="isolate bg-background-secondary">
+      <section className="isolate bg-lavenderRose">
         <div className="container max-w-2xl mx-auto py-16 text-center">
           <h2 className="text-2xl lg:text-[40px] font-semibold leading-tight">
             Introduction To Design System and Storybook
@@ -263,7 +263,7 @@ export default async function IndexPage() {
                 autoComplete="email"
                 placeholder="Enter your email"
                 required
-                className="flex-auto w-full rounded-lg border-0  text-sm lg:text-lg  ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg "
+                className="flex-auto w-full rounded-lg border-0  text-sm lg:text-lg  ring-2 ring-inset ring-border-input ring-black h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg "
               />
               <button
                 type="submit"
@@ -271,7 +271,7 @@ export default async function IndexPage() {
                   buttonVariants({
                     size: "lg",
                   }),
-                  "lg:absolute lg:inset-y-0 lg:right-0 border-solid border-2 border-border text-sm lg:text-lg h-12 lg:h-16 justify-between "
+                  "bg-indigo-300 lg:absolute lg:inset-y-0 lg:right-0 border-solid border-2 border-border text-sm lg:text-lg h-12 lg:h-16 justify-between "
                 )}
               >
                 <span>Register for free</span>
