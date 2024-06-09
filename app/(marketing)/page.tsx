@@ -131,7 +131,7 @@ export default async function IndexPage() {
               className="lg:flex-auto w-full lg:w-1/2"
             >
               <h2 className="text-2xl sm:text-4xl xl:text-5xl text-text-sub-heading font-semibold text-center lg:text-left ">
-                Wanna be a JsLover ?
+                Wanna be a JSLover ?
               </h2>
               <p className="mt-6 text-base lg:text-lg text-center lg:text-left tracking-wide w-full xl:w-3/4">
                 We welcome everyone to join jslover whether as a sponser,
