@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const FeatureCard = ({ feature }: { feature: PurposeCards }) => {
   return (
-    <div className="flex min-w-64 max-w-64 flex-col">
+    <div className="flex min-w-64 max-w-64 flex-col" suppressHydrationWarning>
       <dt className="text-center text-xl font-semibold xl:text-2xl">
         {feature.title}
       </dt>
