@@ -29,6 +29,7 @@ const CarouselSection = ({
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [isClient,setIsClient]=useState(false)
 
   const screenSize = useScreenSize();
 
@@ -49,13 +50,20 @@ const CarouselSection = ({
     return <>{gridChildren}</>;
   }
 
+  useEffect(()=>{
+    setIsClient(true);
+  },[])
+
   return (
     <>
-      <Carousel setApi={setApi} className="w-full">
-        <CarouselContent>{children}</CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+     {isClient && (
+        <Carousel setApi={setApi} className="w-full">
+          <CarouselContent>{children}</CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      )}
+      
       <div className="w-fit py-2 text-center text-sm text-muted-foreground">
         {current} of {count}
       </div>
