@@ -138,7 +138,7 @@ const AboutPage = () => {
       <section className="isolate mt-5 bg-lavenderRose lg:mt-12">
         <div className="container mx-auto max-w-2xl py-8 text-center lg:py-10">
           <h2 className="text-2xl font-semibold leading-tight lg:text-[40px]">
-            Join JsLovers for free
+            Join JSLovers for free
           </h2>
           <p className="text-text-paragraph mt-3 text-base lg:text-lg">
             Connect with developers from everywhere around the world. Make

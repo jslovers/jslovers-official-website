@@ -53,8 +53,8 @@ export default async function SpeakersIndexPage() {
           ))}
         </div>
       </section>
-
-      <section className="bg-background-yellow-light flex flex-col justify-center items-center py-11">
+          
+      {/* <section className="bg-background-yellow-light flex flex-col justify-center items-center py-11">
         <div className="px-6 max-w-[774px] flex flex-col justify-center items-center lg:px-0">
           <p className="text-2xl font-semibold text-center lg:text-4xl">
             Want to brushUp your learning and get ready for interviews?
@@ -83,7 +83,7 @@ export default async function SpeakersIndexPage() {
             />
           </button>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
