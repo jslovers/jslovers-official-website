@@ -40,25 +40,13 @@ const AboutPage = () => {
             className="mx-auto w-min"
             titleClassName="text-center"
           />
-
-          <CarouselSection
-            gridOnLg
-            gridChildren={
-              <div className="flex w-full gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
-                {ABOUT.About.purpose.cards.map((purpose) => (
-                  <FeatureCard feature={purpose} key={purpose.imgSrc} />
-                ))}
-              </div>
-            }
-          >
-            {ABOUT.About.purpose.cards.map((purpose) => (
-              <CarouselItem key={purpose.imgSrc}>
-                <div className="flex w-full justify-center">
-                  <FeatureCard feature={purpose} key={purpose.imgSrc} />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselSection>
+          <section>
+            <div className="flex w-full gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
+              {ABOUT.About.purpose.cards.map((purpose) => (
+                <FeatureCard feature={purpose} key={purpose.imgSrc} />
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
@@ -74,24 +62,13 @@ const AboutPage = () => {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
 
-          <CarouselSection
-            gridOnLg
-            gridChildren={
-              <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
-                {ABOUT.About.team.members.map((speakerProps) => (
-                  <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
-                ))}
-              </div>
-            }
-          >
-            {ABOUT.About.team.members.map((speakerProps) => (
-              <CarouselItem key={speakerProps.id}>
-                <div className="flex w-full justify-center">
-                  <SpeakerCard speaker={speakerProps} />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselSection>
+          <section>
+            <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
+              {ABOUT.About.team.members.map((speakerProps) => (
+                <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
@@ -102,7 +79,17 @@ const AboutPage = () => {
           titleClassName="text-center"
         />
 
-        <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:gap-11">
+        <div className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-11">
+          <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
+            {ABOUT.About.story.faqs.map((faq, i) => (
+              <Accordion
+                key={faq.ques}
+                summaryBgColor={faq.summaryBgColor}
+                title={faq.ques}
+                content={faq.ans}
+              />
+            ))}
+          </div>
           <div className="flex max-w-full flex-col items-center px-4 py-5 lg:w-[50%]">
             <CarouselSection>
               {ABOUT.About.story.images.map((image, i) => (
@@ -120,17 +107,6 @@ const AboutPage = () => {
                 </CarouselItem>
               ))}
             </CarouselSection>
-          </div>
-
-          <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
-            {ABOUT.About.story.faqs.map((faq, i) => (
-              <Accordion
-                key={faq.ques}
-                summaryBgColor={faq.summaryBgColor}
-                title={faq.ques}
-                content={faq.ans}
-              />
-            ))}
           </div>
         </div>
       </section>
