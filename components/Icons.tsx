@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const Icons = {
    logo : () => (
     <Image
-    src="/assets/jsLoversLogo.png" 
+    src="/assets/jslovers-logo.svg" 
     width={92} 
     height={60} 
     alt="JSLovers" 
