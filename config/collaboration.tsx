@@ -1,6 +1,6 @@
 import { SpeakersData } from "@/types";
 
-export const SPEAKERS: SpeakersData = {
+export const COLLABRATIONS: SpeakersData = {
   Navigation: [
     {
       title: "Home",

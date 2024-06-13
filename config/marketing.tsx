@@ -20,6 +20,10 @@ export const MARKETING: MarketingData = {
       href: "/speakers",
     },
     {
+      title: "Collaboration",
+      href: "/collaboration",
+    },
+    {
       title: "About",
       href: "/about",
     },
