@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
-export default async function JobsPage() {
+export default async function page() {
   return (
     <div>
       <section className="flex items-center justify-center flex-col mt-20 lg:mt-[10px]">
