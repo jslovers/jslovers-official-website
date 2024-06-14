@@ -10,7 +10,7 @@ import { ABOUT } from "@/config/about";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const AboutPage = () => {
+export default async function page() {
   return (
     <>
       <section className="isolate">
@@ -154,6 +154,5 @@ const AboutPage = () => {
       </section>
     </>
   );
-};
+}
 
-export default AboutPage;
