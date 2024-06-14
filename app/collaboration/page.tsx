@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { COLLABRATIONS } from "@/config/collaboration";
 import SpeakerCard from "@/components/SpeakerCard";
 
-export default async function CollaborationPage() {
+export default async function page() {
   return (
     <section className="isolate">
       <section className="container flex flex-col items-center gap-9 lg:flex-row-reverse lg:justify-around lg:gap-4">
