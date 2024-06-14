@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { MARKETING } from "@/config/marketing";
 import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
-export default async function IndexPage() {
+export default async function page() {
   return (
     <>
       <section className="isolate">
