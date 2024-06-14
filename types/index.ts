@@ -32,11 +32,14 @@ export interface WorkShopData {
   workshopDate: string;
 }
 
-export interface MarketingData {
-  Navigation: NavItem[];
+export interface Home {
   Achievements: AchievementItem[];
   PreviousTalks: TalkItem[];
   WorkshopData: WorkShopData;
+}
+
+export interface Navigation {
+  Navigation: NavItem[];
 }
 export interface FooterData {
   QuickLinks: FooterItem[];
