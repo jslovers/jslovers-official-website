@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { SPEAKERS } from "@/config/speakers";
 import SpeakerCard from "@/components/SpeakerCard";
 
-export default async function SpeakersIndexPage() {
+export default async function MeetupsPage() {
   return (
     <>
       <section className="container flex flex-col gap-9 items-center lg:flex-row-reverse lg:justify-around lg:gap-4">
