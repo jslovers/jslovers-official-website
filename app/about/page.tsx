@@ -10,7 +10,7 @@ import { ABOUT } from "@/config/about";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-export default async function AboutPage() {
+export default async function page() {
   return (
     <>
       <section className="isolate">
