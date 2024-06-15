@@ -1,8 +1,6 @@
 import { Icons } from "@/components/Icons";
 import { FooterData } from "@/types";
 
-// TODO: Reconfiguration needed once footer content is finalised
-
 export const FOOTER: FooterData = {
   QuickLinks: [
     { title: "Meetups", href: "#" },

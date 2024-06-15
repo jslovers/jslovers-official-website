@@ -11,11 +11,7 @@ export type FooterItem = NavItem & {
 
 export type AchievementItem = NavItem & {
   description: string;
-  image: {
-    src: string;
-    width: number;
-    height: number;
-  };
+  imgSrc: string;
 };
 
 export type TalkItem = Omit<AchievementItem, "description"> & {
