@@ -3,7 +3,7 @@ import SectionHeader from "@/components/SectionHeader";
 import Workshop from "@/components/Workshop";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
-import { MARKETING } from "@/config/marketing";
+import { HOMEPAGE } from "@/config/home";
 import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
 export default async function page() {
@@ -13,7 +13,7 @@ export default async function page() {
         <div className="container py-4">
           <div className="max-w-2xl justify-between lg:flex lg:max-w-full lg:items-center gap-x-20">
             <Workshop
-              workshopData={MARKETING.WorkshopData}
+              workshopData={HOMEPAGE.WorkshopData}
               className={"w-full lg:w-1/2 max-w-2xl lg:shrink-0"}
             />
 
@@ -57,7 +57,7 @@ export default async function page() {
         <div className="container py-16 space-y-16">
           <SectionHeader header="Our Achivements" className="w-min mx-auto" />
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
-            {MARKETING.Achievements.map((achievement) => {
+            {HOMEPAGE.Achievements.map((achievement) => {
               return (
                 <div key={achievement.title} className="flex flex-col">
                   <dt className="text-xl  xl:text-2xl text-center font-semibold">
@@ -89,7 +89,7 @@ export default async function page() {
         <div className="container py-16 space-y-16 flex flex-col justify-center items-center">
           <SectionHeader header="Previous talks" className="w-min" />
           <div className="carousel carousel-center max-w-full flex flex-wrap justify-between gap-7 xl:gap-8 py-5">
-            {MARKETING.PreviousTalks.map((previousTalk, index) => {
+            {HOMEPAGE.PreviousTalks.map((previousTalk, index) => {
               return (
                 <div
                   key={`previousTalk.title + ${index}`}

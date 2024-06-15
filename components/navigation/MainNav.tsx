@@ -1,42 +1,52 @@
-"use client"
-
-import { NavItem } from "@/types";
+"use client";
 import Link from "next/link";
-import { Icons } from "../Icons";
-import { usePathname } from 'next/navigation';
+import { NavItem } from "@/types";
+import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
+import { buttonVariants } from "@/components/Button";
+import { cn } from "@/lib/utils";
 
 interface MainNavProps {
   items?: NavItem[];
   children?: React.ReactNode;
 }
+const createNavigation = (items: NavItem[], currentPath: string) => {
+  return items.map((item, index) => (
+    <Link
+      key={index}
+      href={item.href || ""}
+      className={`flex items-center border-b-4 sm:text-sm md:text-lg ${
+        currentPath === item.href ? "border-black" : "border-white"
+      }`}
+    >
+      {item.title}
+    </Link>
+  ));
+};
 
 export function MainNav({ items }: MainNavProps) {
   const currentPath = usePathname();
 
   return (
-    <div className="flex gap-6 md:gap-10">
-      <h1>
-        <Link href="/">
-          <span className="sr-only">JSLovers</span>
-          <Icons.logo />
-        </Link>
-      </h1>
+    <div className="flex justify-between w-full">
+      <div className="flex">
+      <Logo />
 
-      {items?.length ? (
-        <nav className="hidden gap-10 lg:flex">
-          {items.map((item, index) => (
+          <nav className="hidden gap-10 lg:flex">
+            {items && createNavigation(items, currentPath)}
+          </nav>
+      </div>
+      <nav>
             <Link
-              key={index}
-              href={item.href || ""}
-              className={`flex items-center border-b-4 md:text-lg sm:text-sm ${
-                currentPath === item.href ? "border-black" : "border-white"
-              }`}
+              href="/register"
+              className={cn(
+                buttonVariants(),
+                "border-solid border-2 border-border"
+              )}
             >
-              {item.title}
+              Register Now
             </Link>
-          ))}
-        </nav>
-      ) : null}
+          </nav>
     </div>
   );
 }

@@ -1,33 +1,7 @@
-import { MarketingData } from "@/types";
+import { Home } from "@/types";
 import speakerImage from "public/assets/hero_image_guest_v1.png";
 
-export const MARKETING: MarketingData = {
-  Navigation: [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Meetups",
-      href: "/meetups",
-    },
-    {
-      title: "Jobs",
-      href: "/jobs",
-    },
-    {
-      title: "Speakers",
-      href: "/speakers",
-    },
-    {
-      title: "Collaboration",
-      href: "/collaboration",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
-  ],
+export const HOMEPAGE: Home = {
   Achievements: [
     {
       title: "10,000+ Members",
