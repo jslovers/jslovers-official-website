@@ -12,7 +12,7 @@ export default async function page() {
           src="/assets/speakers_hero_img.png"
           width={600}
           height={432}
-          alt="Speakers"
+          alt=""
           priority
           className="w-[312px] h-[224px] lg:w-[600px] lg:h-[432px]"
         />
@@ -77,7 +77,7 @@ export default async function page() {
               src="/assets/icons/right_arrow.svg"
               width={17}
               height={17}
-              alt="right-arrow"
+              alt=""
               className="ml-2 w-[14px] h-[14px] lg:ml-3 lg:w-[17px] lg:h-[17px]"
               loading="lazy"
             />

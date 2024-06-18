@@ -12,7 +12,7 @@ export default async function page() {
           src="/assets/speakers_hero_img.png"
           width={600}
           height={432}
-          alt="Speakers"
+          alt=""
           priority
           className="h-[224px] w-[312px] lg:h-[432px] lg:w-[600px]"
         />

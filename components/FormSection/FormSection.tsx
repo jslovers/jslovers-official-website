@@ -10,7 +10,7 @@ const FormSection = () => {
           <figure className="rounded-[10px] border-8 border-border lg:p-6">
             <Image
               src="/assets/group_demo.png"
-              alt="group demo"
+              alt=""
               height="324"
               width="546"
             />

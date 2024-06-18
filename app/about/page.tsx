@@ -93,7 +93,7 @@ export default async function page() {
                       src={image}
                       width={381}
                       height={226}
-                      alt="Speaker Image"
+                      alt=""
                       className="w-[250px] rounded-[10px] lg:w-[381px]"
                       loading="lazy"
                     />
