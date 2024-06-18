@@ -2,7 +2,7 @@ import Image from "next/image";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 import { COLLABRATIONS } from "@/config/collaboration";
-import SpeakerCard from "@/components/SpeakerCard";
+import SpeakerCard from "@/components/Cards/SpeakerCard";
 
 export default async function page() {
   return (

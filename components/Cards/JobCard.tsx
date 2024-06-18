@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./Button";
+import { buttonVariants } from "@/components/Button";
 import { JobData } from "@/types";
 
 interface JobCardProps extends JobData {

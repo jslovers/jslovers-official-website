@@ -1,14 +1,14 @@
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import Accordion from "@/components/Accordion";
 import { CarouselSection } from "@/components/CarouselSection";
-import { FeatureCard } from "@/components/FeatureCard";
 import { ImageDoubleFrame } from "@/components/ImageDoubleFrame";
 import SectionHeader from "@/components/SectionHeader";
-import SpeakerCard from "@/components/SpeakerCard";
+import SpeakerCard from "@/components/Cards/SpeakerCard";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
 import { ABOUT } from "@/config/about";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import FeatureStaticList from "@/components/FeatureStaticList/FeatureStaticList";
 
 export default async function page() {
   return (
@@ -40,13 +40,7 @@ export default async function page() {
             className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <section>
-            <div className="flex w-full gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
-              {ABOUT.About.purpose.cards.map((purpose) => (
-                <FeatureCard feature={purpose} key={purpose.imgSrc} />
-              ))}
-            </div>
-          </section>
+          <FeatureStaticList cardData={ABOUT.About.purpose.cards} />
         </div>
       </section>
 
@@ -155,4 +149,3 @@ export default async function page() {
     </>
   );
 }
-

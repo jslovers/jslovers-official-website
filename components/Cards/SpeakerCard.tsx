@@ -2,7 +2,7 @@ import { Speaker } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { ImageDoubleFrame } from "./ImageDoubleFrame";
+import { ImageDoubleFrame } from "@/components/ImageDoubleFrame";
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   return (

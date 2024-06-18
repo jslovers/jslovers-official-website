@@ -19,7 +19,6 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
     workshopDescription,
     workshopDate,
   } = workshopData;
-
   return (
     <div className={cn(className)}>
       <div className="flex justify-center lg:justify-start items-center group flex-wrap">
