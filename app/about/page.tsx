@@ -1,16 +1,16 @@
-import Accordion from "@/components/Accordion";
-import { CarouselSection } from "@/components/CarouselSection";
-import { FeatureCard } from "@/components/FeatureCard";
-import { ImageDoubleFrame } from "@/components/ImageDoubleFrame";
-import SectionHeader from "@/components/SectionHeader";
-import SpeakerCard from "@/components/SpeakerCard";
-import { Button } from "@/components/ui/button";
-import { CarouselItem } from "@/components/ui/carousel";
-import { ABOUT } from "@/config/about";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Accordion from '@/components/Accordion';
+import { CarouselSection } from '@/components/CarouselSection';
+import { FeatureCard } from '@/components/FeatureCard';
+import { ImageDoubleFrame } from '@/components/ImageDoubleFrame';
+import SectionHeader from '@/components/SectionHeader';
+import SpeakerCard from '@/components/SpeakerCard';
+import { Button } from '@/components/ui/button';
+import { CarouselItem } from '@/components/ui/carousel';
+import { ABOUT } from '@/config/about';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
-export default async function page() {
+const AboutPage = () => {
   return (
     <>
       <section className="isolate">
@@ -40,13 +40,25 @@ export default async function page() {
             className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <section>
-            <div className="flex w-full gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
-              {ABOUT.About.purpose.cards.map((purpose) => (
-                <FeatureCard feature={purpose} key={purpose.imgSrc} />
-              ))}
-            </div>
-          </section>
+
+          <CarouselSection
+            gridOnLg
+            gridChildren={
+              <div className="flex w-full gap-7 overflow-x-auto py-5 md:gap-x-8 md:gap-y-20 lg:grid lg:grid-cols-3 lg:justify-items-center xl:grid-cols-4">
+                {ABOUT.About.purpose.cards.map((purpose) => (
+                  <FeatureCard feature={purpose} key={purpose.imgSrc} />
+                ))}
+              </div>
+            }
+          >
+            {ABOUT.About.purpose.cards.map((purpose) => (
+              <CarouselItem key={purpose.imgSrc}>
+                <div className="flex w-full justify-center">
+                  <FeatureCard feature={purpose} key={purpose.imgSrc} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselSection>
         </div>
       </section>
 
@@ -62,13 +74,24 @@ export default async function page() {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
 
-          <section>
-            <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
-              {ABOUT.About.team.members.map((speakerProps) => (
-                <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
-              ))}
-            </div>
-          </section>
+          <CarouselSection
+            gridOnLg
+            gridChildren={
+              <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
+                {ABOUT.About.team.members.map((speakerProps) => (
+                  <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
+                ))}
+              </div>
+            }
+          >
+            {ABOUT.About.team.members.map((speakerProps) => (
+              <CarouselItem key={speakerProps.id}>
+                <div className="flex w-full justify-center">
+                  <SpeakerCard speaker={speakerProps} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselSection>
         </div>
       </section>
 
@@ -79,17 +102,7 @@ export default async function page() {
           titleClassName="text-center"
         />
 
-        <div className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-11">
-          <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
-            {ABOUT.About.story.faqs.map((faq, i) => (
-              <Accordion
-                key={faq.ques}
-                summaryBgColor={faq.summaryBgColor}
-                title={faq.ques}
-                content={faq.ans}
-              />
-            ))}
-          </div>
+        <div className="flex w-full flex-col items-center gap-4 lg:flex-row-reverse lg:gap-11">
           <div className="flex max-w-full flex-col items-center px-4 py-5 lg:w-[50%]">
             <CarouselSection>
               {ABOUT.About.story.images.map((image, i) => (
@@ -108,13 +121,24 @@ export default async function page() {
               ))}
             </CarouselSection>
           </div>
+
+          <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
+            {ABOUT.About.story.faqs.map((faq) => (
+              <Accordion
+                key={faq.ques}
+                summaryBgColor={faq.summaryBgColor}
+                title={faq.ques}
+                content={faq.ans}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="isolate mt-5 bg-lavenderRose lg:mt-12">
         <div className="container mx-auto max-w-2xl py-8 text-center lg:py-10">
           <h2 className="text-2xl font-semibold leading-tight lg:text-[40px]">
-            Join JSLovers for free
+            Join JsLovers for free
           </h2>
           <p className="text-text-paragraph mt-3 text-base lg:text-lg">
             Connect with developers from everywhere around the world. Make
@@ -154,5 +178,6 @@ export default async function page() {
       </section>
     </>
   );
-}
+};
 
+export default AboutPage;

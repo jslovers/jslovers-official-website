@@ -10,7 +10,7 @@ import {
   roleFilterOptions,
 } from "@/lib/mock_data";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+//import Image from "next/image";
 import SignupForMeetupCard from "@/components/SignupForMeetupCard";
 
 export default async function page() {

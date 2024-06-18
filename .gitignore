@@ -34,3 +34,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore all files in the app directory
+/app/*
+/components/*
+
+# Except the about/page.tsx file
+!/app/about/page.tsx
+!/components/ui/calendar.tsx
+!/components/ui/.commandtsx
+
+
