@@ -64,7 +64,7 @@ const JobCard = ({
           src="/assets/icons/right_arrow.svg"
           width="11"
           height="11"
-          alt="right-arrow"
+          alt=""
           className="ml-1"
           loading="lazy"
         />

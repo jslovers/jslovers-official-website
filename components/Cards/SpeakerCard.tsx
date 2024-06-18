@@ -12,7 +12,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
           src={speaker.imageSrc}
           width={204}
           height={204}
-          alt="Speaker Image"
+          alt=""
           className="h-[174px] w-[174px] rounded-[10px] object-cover lg:h-[204px] lg:w-[204px]"
           loading="lazy"
         />
