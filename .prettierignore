@@ -1,7 +1,5 @@
 #Ignore Artifacts
 .next/
-app/
-components/
 
 #Ignore Specific Items
 package-lock.json
