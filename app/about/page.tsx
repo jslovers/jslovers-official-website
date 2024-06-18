@@ -4,7 +4,7 @@ import Accordion from "@/components/Accordion";
 import { CarouselSection } from "@/components/CarouselSection";
 import { ImageDoubleFrame } from "@/components/ImageDoubleFrame";
 import SectionHeader from "@/components/SectionHeader";
-import SpeakerCard from "@/components/SpeakerCard";
+import SpeakerCard from "@/components/Cards/SpeakerCard";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
 import { ABOUT } from "@/config/about";

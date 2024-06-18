@@ -2,7 +2,7 @@ import Image from "next/image";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 import { SPEAKERS } from "@/config/speakers";
-import SpeakerCard from "@/components/SpeakerCard";
+import SpeakerCard from "@/components/Cards/SpeakerCard";
 
 export default async function page() {
   return (
@@ -38,7 +38,7 @@ export default async function page() {
               src="/assets/icons/right_arrow.svg"
               width={17}
               height={17}
-              alt="right-arrow"
+              alt=""
               className="ml-2 w-[14px] h-[14px] lg:ml-3 lg:w-[17px] lg:h-[17px]"
               loading="lazy"
             />

@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { Icons } from "./Icons";
+import { Icons } from "../Icons";
 import { FOOTER } from "@/config/footer";
 import { cn } from "@/lib/utils";
-
-//TODO: Redesign may be needed according to the finalised footer contnent
 
 export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
