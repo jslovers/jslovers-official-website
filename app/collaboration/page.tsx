@@ -2,7 +2,7 @@ import Image from "next/image";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 import { COLLABRATIONS } from "@/config/collaboration";
-import SpeakerCard from "@/components/SpeakerCard";
+import SpeakerCard from "@/components/Cards/SpeakerCard";
 
 export default async function page() {
   return (
@@ -12,7 +12,7 @@ export default async function page() {
           src="/assets/speakers_hero_img.png"
           width={600}
           height={432}
-          alt="Speakers"
+          alt=""
           priority
           className="h-[224px] w-[312px] lg:h-[432px] lg:w-[600px]"
         />

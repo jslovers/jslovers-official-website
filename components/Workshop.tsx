@@ -19,13 +19,12 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
     workshopDescription,
     workshopDate,
   } = workshopData;
-
   return (
     <div className={cn(className)}>
       <div className="flex justify-center lg:justify-start items-center group flex-wrap">
         <Image
           src={speakerImageSrc}
-          alt="hero_image"
+          alt=""
           className="mb-4 lg:mb-0"
         />
         <div className="sm:ml-5 text-center sm:text-left space-y-1.5">

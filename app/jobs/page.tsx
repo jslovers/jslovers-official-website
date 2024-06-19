@@ -1,7 +1,7 @@
 import { buttonVariants } from "@/components/Button";
 import Dropdown from "@/components/Dropdown";
 import { Icons } from "@/components/Icons";
-import JobCard from "@/components/JobCard";
+import JobCard from "@/components/Cards/JobCard";
 import {
   comapnyFilterOptions,
   experienceFilterOptions,
@@ -10,8 +10,8 @@ import {
   roleFilterOptions,
 } from "@/lib/mock_data";
 import { cn } from "@/lib/utils";
-//import Image from "next/image";
-import SignupForMeetupCard from "@/components/SignupForMeetupCard";
+import Image from "next/image";
+import SignupForMeetupCard from "@/components/Cards/SignupForMeetupCard";
 
 export default async function page() {
   return (

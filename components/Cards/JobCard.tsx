@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./Button";
+import { buttonVariants } from "@/components/Button";
 import { JobData } from "@/types";
 
 interface JobCardProps extends JobData {
@@ -64,7 +64,7 @@ const JobCard = ({
           src="/assets/icons/right_arrow.svg"
           width="11"
           height="11"
-          alt="right-arrow"
+          alt=""
           className="ml-1"
           loading="lazy"
         />
