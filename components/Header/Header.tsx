@@ -1,4 +1,4 @@
-import { MainNav } from "@/components/Navigation/MainNav";
+import { MainNav } from "@/components/navigation/MainNav";
 import { NAVIGATION } from "@/config/navigation";
 
 export function Header() {
