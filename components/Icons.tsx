@@ -3,8 +3,8 @@
 export const Icons = {
   logo: () => (
     <svg
-    width="150"
-    height="100"
+    width="75"
+    height="50"
     viewBox="0 0 2161 2161"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
