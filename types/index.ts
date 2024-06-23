@@ -80,6 +80,13 @@ export interface SpeakersData {
   Speakers: Speaker[];
 }
 
+export interface Talk{
+  imgSrc: string;
+  title: string;
+  date: string;
+  speaker: string;
+}
+
 export interface About {
   hero: {
     title: string;

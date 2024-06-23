@@ -4,7 +4,9 @@ import SignupForMeetupCard from "@/components/Cards/SignupForMeetupCard";
 import FormSection from "@/components/FormSection/FormSection";
 import FeatureStaticList from "@/components/FeatureStaticList/FeatureStaticList";
 import Hero from "@/components/Hero/Hero";
-import Talk from "@/components/Cards/Talk";
+import TalkCard from "@/components/Cards/TalkCard";
+import dynamic from 'next/dynamic';
+const CarouselWithDots = dynamic(() => import('@/components/CarouselWithDots'), { ssr: false });
 
 export default async function page() {
   return (
@@ -23,9 +25,9 @@ export default async function page() {
       <section className="isolate">
         <div className="container flex flex-col items-center justify-center space-y-16 py-16">
           <SectionHeader header="Previous talks" className="w-min" />
-          <div className="carousel carousel-center flex max-w-full flex-wrap justify-between gap-7 py-5 xl:gap-8">
-            <Talk data={HOMEPAGE.PreviousTalks} />
-          </div>
+          <CarouselWithDots>
+            {HOMEPAGE.PreviousTalks.map((talk, index) => <TalkCard key={`${talk.title} ${index}`} talk={talk} />)}
+          </CarouselWithDots>
         </div>
       </section>
 
