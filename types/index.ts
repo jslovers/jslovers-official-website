@@ -56,6 +56,14 @@ export interface JobData {
   company_logo: string;
 }
 
+export type FilterType = "Company" | "Role" | "Experience" | "Location";
+export interface FilterDetails {
+  filter_options: string[];
+  filter_backgroundColor: string;
+}
+
+export type FilterMap = Record<FilterType, FilterDetails>;
+
 export interface Speaker {
   id: string;
   imageSrc: string;
@@ -80,7 +88,7 @@ export interface SpeakersData {
   Speakers: Speaker[];
 }
 
-export interface Talk{
+export interface Talk {
   imgSrc: string;
   title: string;
   date: string;

@@ -1,19 +1,9 @@
-import { buttonVariants } from "@/components/Button";
-import Dropdown from "@/components/Dropdown";
 import { Icons } from "@/components/Icons";
-import JobCard from "@/components/Cards/JobCard";
-import {
-  comapnyFilterOptions,
-  experienceFilterOptions,
-  jobsList,
-  locationFilterOptions,
-  roleFilterOptions,
-} from "@/lib/mock_data";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import SignupForMeetupCard from "@/components/Cards/SignupForMeetupCard";
+import { JobSection } from "@/components/JobSection";
 
 export default async function page() {
+
   return (
     <div>
       <section className="flex items-center justify-center flex-col mt-20 lg:mt-[10px]">
@@ -29,70 +19,7 @@ export default async function page() {
           ))}
         </div>
       </section>
-      <section className="mx-10 lg:mx-32">
-        <div className="hidden lg:block">
-          <p className="font-medium text-[20px]">
-            Filter the job results as per your need
-          </p>
-          <div className="flex items-center gap-x-8 mt-6">
-            <Dropdown
-              filter_name="Company"
-              filter_options={comapnyFilterOptions}
-              filter_background="#e0719e"
-            />
-            <Dropdown
-              filter_name="Role"
-              filter_options={roleFilterOptions}
-              filter_background="#f6e049"
-            />
-            <Dropdown
-              filter_name="Experience"
-              filter_options={experienceFilterOptions}
-              filter_background="#7fd6c2"
-            />
-            <Dropdown
-              filter_name="Location"
-              filter_options={locationFilterOptions}
-              filter_background="#f6a649"
-            />
-          </div>
-
-          <div className="mt-16 mb-9 border-[1.5px] border-divider" />
-        </div>
-        <div className="carousel carousel-center max-w-full flex justify-between gap-7 lg:grid lg:grid-cols-4 lg:gap-4">
-          {jobsList?.length > 0 &&
-            jobsList.map((job, i) => (
-              <JobCard
-                key={i}
-                {...job}
-                className="carousel-item min-w-[280px] lg:min-w-min"
-              />
-            ))}
-        </div>
-        <p className="text-2xl font-medium mt-9 mb-14 lg:hidden text-center">
-          Similar Jobs
-        </p>
-        <div className="carousel carousel-center max-w-full flex justify-between gap-7 mb-64 lg:hidden">
-          {jobsList?.length > 0 &&
-            jobsList.map((job, i) => (
-              <JobCard
-                key={i}
-                {...job}
-                className="carousel-item min-w-[280px] lg:min-w-min"
-              />
-            ))}
-        </div>
-        <div className="hidden lg:flex items-center justify-center">
-          <button
-            className={cn(
-              buttonVariants({ variant: "secondary" }),
-              "border-solid border-2 border-border my-16 px-8 py-6 text-xl font-medium"
-            )}
-          >
-            Load more
-          </button>
-        </div>
-      </section>
+      <JobSection/>
       <SignupForMeetupCard />
       {/* <section className="bg-background-yellow-light flex flex-col justify-center items-center">
         <p className=" text-2xl lg:text-[40px] font-semibold text-center mt-10 max-w-xs lg:max-w-3xl mb-5">

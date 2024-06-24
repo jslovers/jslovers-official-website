@@ -1,3 +1,5 @@
+import { FilterMap, FilterType } from "@/types";
+
 export const jobsList = [
   {
     id: 1,
@@ -97,7 +99,7 @@ export const jobsList = [
   },
 ];
 
-export const comapnyFilterOptions = ["Amazon", "Razorpay"];
+export const companyFilterOptions = ["Amazon", "Razorpay"];
 export const roleFilterOptions = ["Full time", "Part time", "Contract"];
 export const experienceFilterOptions = [
   "<1 year",
@@ -106,3 +108,23 @@ export const experienceFilterOptions = [
   "5+ years",
 ];
 export const locationFilterOptions = ["abc", "xyz"];
+
+export const jobFilters: FilterMap = {
+  "Company": {
+    filter_options: companyFilterOptions,
+    filter_backgroundColor: "#e0719e",
+  },
+  "Role": {
+    filter_options: roleFilterOptions,
+    filter_backgroundColor: "#f6e049",
+  },
+  "Experience": {
+    filter_options: experienceFilterOptions,
+    filter_backgroundColor: "#7fd6c2",
+  },
+  "Location": {
+    filter_options: locationFilterOptions,
+    filter_backgroundColor: "#f6a649",
+  }
+};
+ 
