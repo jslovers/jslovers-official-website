@@ -97,12 +97,11 @@ export const jobsList = [
   },
 ];
 
-export const comapnyFilterOptions = ["Amazon", "Razorpay"];
-export const roleFilterOptions = ["Full time", "Part time", "Contract"];
-export const experienceFilterOptions = [
-  "<1 year",
-  "1-2 years",
-  "3-4 years",
-  "5+ years",
-];
-export const locationFilterOptions = ["abc", "xyz"];
+const getUniqueOptions = (key) => {
+  return [...new Set(jobsList.map((job) => key.split('.').reduce((obj, k) => obj && obj[k], job)))];
+};
+
+export const comapnyFilterOptions = getUniqueOptions("company_name")
+export const roleFilterOptions = getUniqueOptions("role")
+export const experienceFilterOptions = getUniqueOptions("experience")
+export const locationFilterOptions =getUniqueOptions("location.city")
