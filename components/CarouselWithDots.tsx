@@ -4,10 +4,11 @@ import { useScreenSize } from "@/lib/useScreenSize";
 
 interface CarouselWithDotsProps {
   children: ReactNode[];
+  className?: string;
   autoRotateInterval?: number;
 }
 
-const CarouselWithDots: React.FC<CarouselWithDotsProps> = ({ children, autoRotateInterval = 1000 }) => {
+const CarouselWithDots: React.FC<CarouselWithDotsProps> = ({ children,className, autoRotateInterval = 1000 }) => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const screenSize = useScreenSize();
@@ -45,7 +46,7 @@ const CarouselWithDots: React.FC<CarouselWithDotsProps> = ({ children, autoRotat
   };
 
   return (
-    <div className="flex flex-col items-center space-y-5">
+    <div className={`flex flex-col items-center space-y-5 ${className}`}>
       <div className="carousel carousel-center flex max-w-full flex-wrap justify-between gap-7 py-5 xl:gap-8">
         {visibleItems}
       </div>

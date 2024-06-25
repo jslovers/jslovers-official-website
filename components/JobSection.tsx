@@ -5,6 +5,7 @@ import React, { useCallback, useState } from 'react'
 import JobCard from './Cards/JobCard';
 import { buttonVariants } from "@/components/Button";
 import { FilterType } from '@/types';
+import CarouselWithDots from './CarouselWithDots';
 
 
 export const JobSection = () => {
@@ -41,7 +42,7 @@ export const JobSection = () => {
     }, []);
 
     return (
-        <section className="mx-10 lg:mx-32">
+        <section className="mx-6 lg:mx-32">
             <div className='mb-6'>
                 <p className="font-medium text-[20px]">
                     Filter the job results as per your need
@@ -107,29 +108,43 @@ export const JobSection = () => {
 
 
             </div>
-            <div className="carousel carousel-center max-w-full flex justify-between gap-7 lg:grid lg:grid-cols-4 lg:gap-4">
-                {jobsList?.length > 0 &&
-                    jobsList.map((job, i) => (
-                        <JobCard
-                            key={i}
-                            {...job}
-                            className="carousel-item min-w-[280px] lg:min-w-min"
-                        />
-                    ))}
-            </div>
-            <p className="text-2xl font-medium mt-9 mb-14 lg:hidden text-center">
-                Similar Jobs
-            </p>
-            <div className="carousel carousel-center max-w-full flex justify-between gap-7 mb-64 lg:hidden">
-                {jobsList?.length > 0 &&
-                    jobsList.map((job, i) => (
-                        <JobCard
-                            key={i}
-                            {...job}
-                            className="carousel-item min-w-[280px] lg:min-w-min"
-                        />
-                    ))}
-            </div>
+            {jobsList?.length > 0 &&
+                <>
+                    <CarouselWithDots className="lg:hidden">
+                        {jobsList.map((job, i) => <JobCard key={i} {...job} />)}
+                    </CarouselWithDots>
+                    <div className="hidden carousel carousel-center max-w-full justify-between gap-7 lg:grid lg:grid-cols-4 lg:gap-4">
+                        {jobsList.map((job, i) => (
+                            <JobCard
+                                key={i}
+                                {...job}
+                                className="carousel-item min-w-[280px] lg:min-w-min"
+                            />
+                        ))}
+                    </div>
+                </>
+            }
+
+            {/* {jobsList?.length > 0 &&
+                <>
+                    <p className="text-2xl font-medium my-9 lg:hidden text-center">
+                        Similar Jobs
+                    </p>
+                    <CarouselWithDots className="lg:hidden">
+                        {jobsList.map((job, i) => <JobCard key={i} {...job} />)}
+                    </CarouselWithDots>
+                    <div className="hidden carousel carousel-center max-w-full justify-between gap-7 lg:grid lg:grid-cols-4 lg:gap-4">
+                        {jobsList.map((job, i) => (
+                            <JobCard
+                                key={i}
+                                {...job}
+                                className="carousel-item min-w-[280px] lg:min-w-min"
+                            />
+                        ))}
+                    </div>
+                </>
+            } */}
+
             <div className="hidden lg:flex items-center justify-center">
                 <button
                     className={cn(
