@@ -10,7 +10,7 @@ export default async function page() {
   return (
     <>
       <section className="isolate">
-        <Hero workshop={HOMEPAGE.Workshop} />
+        <Hero data={HOMEPAGE.Workshop} />
       </section>
 
       <section className="isolate">
