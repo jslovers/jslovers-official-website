@@ -67,7 +67,7 @@ export const HOMEPAGE: Home = {
       speaker: "Neha Sharma",
     },
   ],
-  WorkshopData: {
+  Workshop: {
     speakerImageSrc: speakerImage,
     speakerName: "John Doe",
     speakerRole: "Frontend Architect at Apple",

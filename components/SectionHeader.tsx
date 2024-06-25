@@ -1,6 +1,6 @@
 import { generateUnderlineSVGs } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
-interface SectionHeaderProps {
+type SectionHeaderProps = {
   header: string;
   className?: string;
   titleClassName?: string;

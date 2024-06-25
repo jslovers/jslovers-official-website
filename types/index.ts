@@ -1,25 +1,21 @@
 import { StaticImageData } from "next/image";
 
-export type NavItem = {
+export interface Navigation {
   title: string;
   href?: string;
 };
 
-export type FooterItem = NavItem & {
-  logo?: JSX.Element;
-};
-
-export type AchievementItem = NavItem & {
+export interface Achievement extends Navigation {
   description: string;
   imgSrc: string;
 };
 
-export type TalkItem = Omit<AchievementItem, "description"> & {
+export interface Talk extends Omit<Achievement, "description"> {
   date: string;
   speaker: string;
 };
 
-export interface WorkShopData {
+export interface Workshop {
   speakerImageSrc: StaticImageData;
   speakerName: string;
   speakerRole: string;
@@ -29,31 +25,9 @@ export interface WorkShopData {
 }
 
 export interface Home {
-  Achievements: AchievementItem[];
-  PreviousTalks: TalkItem[];
-  WorkshopData: WorkShopData;
-}
-
-export interface Navigation {
-  Navigation: NavItem[];
-}
-export interface FooterData {
-  QuickLinks: FooterItem[];
-  FollowUs: FooterItem[];
-  Sponsors: FooterItem[];
-}
-
-export interface JobData {
-  id: number;
-  company_name: string;
-  location: {
-    city: string;
-    country: string;
-  };
-  is_remote: boolean;
-  experience: string;
-  role: string;
-  company_logo: string;
+  Achievements: Achievement[];
+  PreviousTalks: Talk[];
+  Workshop: Workshop;
 }
 
 export interface Speaker {
@@ -69,18 +43,20 @@ export interface Speaker {
   }[];
 }
 
-export interface PurposeCards {
+export interface Feature {
   title: string;
   imgSrc: string;
   description: string;
 }
 
-export interface SpeakersData {
-  Navigation: NavItem[];
+export interface SpeakersDetails {
+  Navigation: Navigation[];
   Speakers: Speaker[];
 }
 
+
 export interface About {
+  Navigation: Navigation[];
   hero: {
     title: string;
     description: string;
@@ -88,7 +64,7 @@ export interface About {
   };
   purpose: {
     title: string;
-    cards: PurposeCards[];
+    cards: Feature[];
   };
   team: {
     title: string;
@@ -103,9 +79,4 @@ export interface About {
       ans: string;
     }[];
   };
-}
-
-export interface AboutData {
-  Navigation: NavItem[];
-  About: About;
 }

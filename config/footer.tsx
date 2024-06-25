@@ -1,7 +1,17 @@
 import { Icons } from "@/components/Icons";
-import { FooterData } from "@/types";
+import { Navigation } from "@/types";
 
-export const FOOTER: FooterData = {
+export type FooterProps = Navigation & {
+  logo?: JSX.Element;
+};
+
+type Footer = {
+  QuickLinks: FooterProps[];
+  FollowUs: FooterProps[];
+  Sponsors: FooterProps[];
+};
+
+export const FOOTER: Footer = {
   QuickLinks: [
     { title: "Meetups", href: "#" },
     { title: "Jobs", href: "/jobs" },

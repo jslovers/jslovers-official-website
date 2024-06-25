@@ -1,6 +1,6 @@
-import { SpeakersData } from "@/types";
+import { SpeakersDetails } from "@/types";
 
-export const SPEAKERS: SpeakersData = {
+export const SPEAKERS: SpeakersDetails = {
   Navigation: [
     {
       title: "Home",

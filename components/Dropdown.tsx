@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
-interface DropdownProps {
+type DropdownProps = {
   filter_name: string;
   filter_options: string[];
   filter_background?: string;
   className?: string;
-}
+};
 const Dropdown = ({
   filter_name,
   filter_options,
@@ -12,12 +12,12 @@ const Dropdown = ({
   className,
 }: DropdownProps) => {
   return (
-    <div className={cn("group inline-block relative", className)}>
+    <div className={cn("group relative inline-block", className)}>
       <button
         style={{
           backgroundColor: `${filter_background ? filter_background : null}`,
         }}
-        className="bg-gray-300 text-xl font-medium py-3 px-6 rounded-[56px] inline-flex items-center border-solid border-2 border-border"
+        className="inline-flex items-center rounded-[56px] border-2 border-solid border-border bg-gray-300 px-6 py-3 text-xl font-medium"
       >
         <span className="mr-1">{filter_name}</span>
         <svg
@@ -36,12 +36,12 @@ const Dropdown = ({
           />
         </svg>
       </button>
-      <ul className="absolute hidden text-gray-700 pt-1 group-hover:block">
+      <ul className="absolute hidden pt-1 text-gray-700 group-hover:block">
         {filter_options?.length > 0 &&
           filter_options.map((opt: string, i: number) => (
             <li className="" key={i}>
               <a
-                className=" bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                className=" whitespace-no-wrap block bg-gray-200 px-4 py-2 hover:bg-gray-400"
                 href="#"
               >
                 {opt}

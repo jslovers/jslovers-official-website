@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-interface AccordionProps {
+type AccordionProps = {
   summaryBgColor: string;
   title: string;
   content: string;

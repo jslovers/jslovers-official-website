@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./Button";
 import { cn } from "@/lib/utils";
-import { WorkShopData } from "@/types";
+import { Workshop } from "@/types";
 
-interface WorkshopProps {
-  workshopData: WorkShopData;
+type WorkshopProps = {
+  workshopData: Workshop;
   className?: string;
-}
+};
 
-const Workshop = ({ workshopData, className }: WorkshopProps) => {
+const WorkshopDetails = ({ workshopData, className }: WorkshopProps) => {
   const {
     speakerImageSrc,
     speakerName,
@@ -21,29 +21,27 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
   } = workshopData;
   return (
     <div className={cn(className)}>
-      <div className="flex justify-center lg:justify-start items-center group flex-wrap">
-        <Image
-          src={speakerImageSrc}
-          alt=""
-          className="mb-4 lg:mb-0"
-        />
-        <div className="sm:ml-5 text-center sm:text-left space-y-1.5">
-          <h2 className="text-xl  lg:text-2xl xl:text-3xl font-medium text-text-sub-heading-2">
+      <div className="group flex flex-wrap items-center justify-center lg:justify-start">
+        <Image src={speakerImageSrc} alt="" className="mb-4 lg:mb-0" />
+        <div className="space-y-1.5 text-center sm:ml-5 sm:text-left">
+          <h2 className="text-text-sub-heading-2  text-xl font-medium lg:text-2xl xl:text-3xl">
             Upcoming Workshop by
           </h2>
-          <Link href="#" className="text-lg lg:text-xl font-semibold">{speakerName}</Link>
-          <p className="text-sm lg:text-base font-semibold text-text-muted">
+          <Link href="#" className="text-lg font-semibold lg:text-xl">
+            {speakerName}
+          </Link>
+          <p className="text-text-muted text-sm font-semibold lg:text-base">
             {speakerRole}
           </p>
         </div>
       </div>
-      <h1 className="mt-2 text-center lg:text-left text-2xl lg:text-[40px] font-semibold leading-tight">
+      <h1 className="mt-2 text-center text-2xl font-semibold leading-tight lg:text-left lg:text-[40px]">
         {workshopTitle}
       </h1>
-      <p className="relative mt-2 text-center lg:text-left text-base lg:text-lg text-text-paragraph sm:max-w-full lg:max-w-none">
+      <p className="text-text-paragraph relative mt-2 text-center text-base sm:max-w-full lg:max-w-none lg:text-left lg:text-lg">
         {workshopDescription}
       </p>
-      <p className="mt-3 font-semibold text-text-accent text-center lg:text-left text-sm lg:text-xl text-blue-700">
+      <p className="text-text-accent mt-3 text-center text-sm font-semibold text-blue-700 lg:text-left lg:text-xl">
         {workshopDate}
       </p>
 
@@ -51,7 +49,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
         <label htmlFor="email-address" className="sr-only">
           Email address
         </label>
-        <div className="relative flex flex-col lg:flex-row flex-grow space-y-4 lg:space-y-0">
+        <div className="relative flex flex-grow flex-col space-y-4 lg:flex-row lg:space-y-0">
           <input
             type="email"
             name="email"
@@ -59,7 +57,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
             autoComplete="email"
             placeholder="Enter your email"
             required
-            className="flex-auto w-full rounded-lg border-0  text-sm lg:text-lg  ring-2 ring-inset ring-border-input h-12 lg:h-16 pl-6 placeholder:text-sm lg:placeholder:text-lg "
+            className="ring-border-input h-12 w-full flex-auto  rounded-lg border-0  pl-6 text-sm ring-2 ring-inset placeholder:text-sm lg:h-16 lg:text-lg lg:placeholder:text-lg "
           />
           <button
             type="submit"
@@ -67,7 +65,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
               buttonVariants({
                 size: "lg",
               }),
-              "lg:absolute lg:inset-y-0 lg:right-0 border-solid border-2 border-border text-sm lg:text-lg h-12 lg:h-16 justify-between "
+              "h-12 justify-between border-2 border-solid border-border text-sm lg:absolute lg:inset-y-0 lg:right-0 lg:h-16 lg:text-lg ",
             )}
           >
             <span>Register for free</span>
@@ -79,4 +77,4 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
   );
 };
 
-export default Workshop;
+export default WorkshopDetails;
