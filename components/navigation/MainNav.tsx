@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
-import { NavItem } from "@/types";
+import { Navigation } from "@/types";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { buttonVariants } from "@/components/Button";
 import { cn } from "@/lib/utils";
 
-interface MainNavProps {
-  items?: NavItem[];
+type MainNavProps = {
+  items?: Navigation[];
   children?: React.ReactNode;
 }
-const createNavigation = (items: NavItem[], currentPath: string) => {
+const createNavigation = (items: Navigation[], currentPath: string) => {
   return items.map((item, index) => (
     <Link
       key={index}

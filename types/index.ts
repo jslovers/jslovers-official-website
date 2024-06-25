@@ -1,16 +1,16 @@
 import { StaticImageData } from "next/image";
 
-export type Navigation = {
+export interface Navigation {
   title: string;
   href?: string;
 };
 
-export type Achievement = Navigation & {
+export interface Achievement extends Navigation {
   description: string;
   imgSrc: string;
 };
 
-export type Talk = Omit<Achievement, "description"> & {
+export interface Talk extends Omit<Achievement, "description"> {
   date: string;
   speaker: string;
 };

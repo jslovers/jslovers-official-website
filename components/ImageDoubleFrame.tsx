@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface ImageDoubleFrameProps {
+type ImageDoubleFrameProps = {
   children: ReactNode;
 }
 
