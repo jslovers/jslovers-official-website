@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./Button";
 import { cn } from "@/lib/utils";
-import { WorkShopData } from "@/types";
+import { Workshop } from "@/types";
 
 interface WorkshopProps {
-  workshopData: WorkShopData;
+  workshopData: Workshop;
   className?: string;
 }
 
-const Workshop = ({ workshopData, className }: WorkshopProps) => {
+const WorkshopDetails = ({ workshopData, className }: WorkshopProps) => {
   const {
     speakerImageSrc,
     speakerName,
@@ -79,4 +79,4 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
   );
 };
 
-export default Workshop;
+export default WorkshopDetails;

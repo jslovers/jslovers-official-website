@@ -2,11 +2,25 @@ import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/Button";
-import { JobData } from "@/types";
 
-interface JobCardProps extends JobData {
+export type JobCardProps = Job & {
   className?: string;
 }
+
+type Job = {
+  id: number;
+  company_name: string;
+  location: {
+    city: string;
+    country: string;
+  };
+  is_remote: boolean;
+  experience: string;
+  role: string;
+  company_logo: string;
+}
+
+
 const JobCard = ({
   company_name,
   location,

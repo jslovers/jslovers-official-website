@@ -1,7 +1,7 @@
-import { PurposeCards } from "@/types";
+import { Feature } from "@/types";
 import Image from "next/image";
 
-export const FeatureCard = ({ feature }: { feature: PurposeCards }) => {
+export const FeatureCard = ({ feature }: { feature: Feature }) => {
   return (
     <div className="flex min-w-64 max-w-64 flex-col">
       <dt className="text-center text-xl font-semibold xl:text-2xl">

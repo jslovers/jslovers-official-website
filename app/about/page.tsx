@@ -36,18 +36,18 @@ export default async function page() {
       <section className="isolate">
         <div className="container flex flex-col items-center justify-center gap-6 py-8 lg:gap-9">
           <SectionHeader
-            header={`${ABOUT.About.purpose.title}`}
+            header={`${ABOUT.purpose.title}`}
             className="mx-auto w-min"
             titleClassName="text-center"
           />
-          <FeatureStaticList cardData={ABOUT.About.purpose.cards} />
+          <FeatureStaticList cardData={ABOUT.purpose.cards} />
         </div>
       </section>
 
       <section className="isolate">
         <div className="container flex flex-col items-center justify-center gap-6 py-8 lg:gap-9">
           <SectionHeader
-            header={`${ABOUT.About.team.title}`}
+            header={`${ABOUT.team.title}`}
             className="mx-auto w-min"
             titleClassName="text-center"
           />
@@ -58,7 +58,7 @@ export default async function page() {
 
           <section>
             <div className="flex w-full gap-7 py-5 md:gap-x-4 md:gap-y-20 lg:grid lg:grid-cols-3">
-              {ABOUT.About.team.members.map((speakerProps) => (
+              {ABOUT.team.members.map((speakerProps) => (
                 <SpeakerCard key={speakerProps.id} speaker={speakerProps} />
               ))}
             </div>
@@ -68,14 +68,14 @@ export default async function page() {
 
       <section className="flex flex-col items-center justify-center gap-6 py-8 lg:container lg:gap-9">
         <SectionHeader
-          header={`${ABOUT.About.story.title}`}
+          header={`${ABOUT.story.title}`}
           className="mx-auto w-min"
           titleClassName="text-center"
         />
 
         <div className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-11">
           <div className="container flex flex-col items-center gap-1 lg:w-[50%] lg:gap-3 lg:px-0">
-            {ABOUT.About.story.faqs.map((faq, i) => (
+            {ABOUT.story.faqs.map((faq, i) => (
               <Accordion
                 key={faq.ques}
                 summaryBgColor={faq.summaryBgColor}
@@ -86,7 +86,7 @@ export default async function page() {
           </div>
           <div className="flex max-w-full flex-col items-center px-4 py-5 lg:w-[50%]">
             <CarouselSection>
-              {ABOUT.About.story.images.map((image, i) => (
+              {ABOUT.story.images.map((image, i) => (
                 <CarouselItem key={i}>
                   <ImageDoubleFrame>
                     <Image
