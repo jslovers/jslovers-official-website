@@ -6,11 +6,13 @@ import FeatureStaticList from "@/components/FeatureStaticList/FeatureStaticList"
 import Hero from "@/components/Hero/Hero";
 import PreviousTalk from "@/components/Cards/Talk";
 
+
 export default async function page() {
   return (
     <>
       <section className="isolate">
         <Hero data={HOMEPAGE.Workshop} />
+
       </section>
 
       <section className="isolate">

@@ -4,11 +4,11 @@ import { Icons } from "../Icons";
 
 export function Logo() {
   return (
-      <h1>
-        <Link href="/">
-          <span className="sr-only">JSLovers</span>
-          <Icons.logo />
-        </Link>
-      </h1>
+    <h1>
+      <Link href="/">
+        <span className="sr-only">JSLovers</span>
+        <Icons.logo />
+      </Link>
+    </h1>
   );
 }
