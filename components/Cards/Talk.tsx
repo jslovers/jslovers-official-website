@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Talk } from "@/types";
 
-const Talk = ({data}:any) => {
+const PreviousTalk = ({ data }: { data: Talk[] }) => {
   const createCardsList = () => {
-    return data.map((item: any, index: number) => {
+    return data.map((item: Talk, index: number) => {
       return (
         <Link href="#" key={`previousTalk.title + ${index}`}>
           <div className="carousel-item rounded-lg border-2 border-border p-5 lg:p-7">
@@ -31,4 +32,4 @@ const Talk = ({data}:any) => {
   return <>{data && createCardsList()}</>;
 };
 
-export default Talk;
+export default PreviousTalk;

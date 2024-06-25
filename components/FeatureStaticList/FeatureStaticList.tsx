@@ -1,9 +1,9 @@
+import { Achievement } from "@/types";
 import Image from "next/image";
 
-const FeatureStaticList = (cardData: any) => {
-
-const createList = ({cardData}: any) => {
-    return cardData.map((item: any) => {
+const FeatureStaticList = ({ cardData }: { cardData: Achievement[] }) => {
+  const createList = (cardData : Achievement[]) => {
+    return cardData.map((item: Achievement) => {
       return (
         <div key={item.title} className="flex flex-col">
           <dt className="text-center  text-xl font-semibold xl:text-2xl">
@@ -26,7 +26,7 @@ const createList = ({cardData}: any) => {
       );
     });
   };
-  
+
   return (
     <dl className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
       {cardData && createList(cardData)}
