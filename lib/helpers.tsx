@@ -30,3 +30,26 @@ export function generateUnderlineSVGs(widths: number[], heights: number[]) {
 
   return svgs;
 }
+
+export function convertDateTimeForMeetupDetail(dateTimeStr: string) {
+  const dateTime = new Date(dateTimeStr);
+
+  const optionsDate: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
+  const formattedDate = dateTime.toLocaleDateString('en-US', optionsDate);
+  const [month, day] = formattedDate.split(' ');
+  const dateOrdinal = getOrdinal(dateTime.getDate());
+
+  const timezoneAbbr = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  const formattedStartTimeLocal = dateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: timezoneAbbr });
+
+  const formattedDateTime = `On ${dateOrdinal} ${month} at ${formattedStartTimeLocal} ${timezoneAbbr}`;
+  return formattedDateTime;  // Sample Output: On 21st October at 01:00 AM IST
+}
+
+// Helper function to get ordinal suffix for date
+function getOrdinal(n: number) {
+  const suffixes = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (suffixes[(v - 20) % 10] || suffixes[v] || suffixes[0]);
+}

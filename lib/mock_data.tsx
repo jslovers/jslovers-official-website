@@ -126,87 +126,92 @@ export const jobFilters: JobFilterMap = {
 export const meetupsList: Meetup[] = [
   {
     id: 1,
-    location: { city: "San Francisco", country: "USA" },
+    isOnline: true,
     topicName: "React Native Development",
     level: "Intermediate",
     speakerName: "John Doe",
-    dateTime: new Date("2024-07-10T18:00:00Z"),
-    timeZone: "PDT",
+    dateTime: "2024-07-10T18:00:00-07:00", // PDT timezone (-07:00)
     banner: "https://example.com/meetup1-banner.jpg"
   },
   {
     id: 2,
     location: { city: "London", country: "UK" },
+    isOnline: false,
     topicName: "Building Scalable APIs with Node.js",
     level: "Advanced",
     speakerName: "Jane Smith",
-    dateTime: new Date("2024-07-15T17:30:00Z"),
-    timeZone: "BST",
+    dateTime: "2024-07-15T17:30:00+01:00", // BST timezone (+01:00)
     banner: "https://example.com/meetup2-banner.jpg"
   },
   {
     id: 3,
-    location: { city: "New York City", country: "USA" },
+    isOnline: true,
     topicName: "Python Web Development",
     level: "Beginner",
     speakerName: "Michael Brown",
-    dateTime: new Date("2024-07-20T19:00:00Z"),
-    timeZone: "EDT",
+    dateTime: "2024-07-20T19:00:00-04:00", // EDT timezone (-04:00)
     banner: "https://example.com/meetup3-banner.jpg"
   },
   {
     id: 4,
-    location: { city: "Berlin", country: "Germany" },
+    isOnline: true,
     topicName: "iOS App Development",
     level: "Intermediate",
     speakerName: "Anna Müller",
-    dateTime: new Date("2024-07-12T16:00:00Z"),
-    timeZone: "CEST",
-    banner: "https://example.com/meetup4-banner.jpg"
+    dateTime: "2024-07-12T16:00:00+02:00", // CEST timezone (+02:00)
+    banner: "https://example.com/meetup4-banner.jpg",
   },
   {
     id: 5,
     location: { city: "Singapore", country: "Singapore" },
+    isOnline: false,
     topicName: "Frontend Frameworks Comparison",
     level: "Advanced",
     speakerName: "David Lim",
-    dateTime: new Date("2024-07-25T15:30:00Z"),
-    timeZone: "SGT",
+    dateTime: "2024-07-25T15:30:00+08:00", // SGT timezone (+08:00)
     banner: "https://example.com/meetup5-banner.jpg"
   },
   {
     id: 6,
-    location: { city: "San Francisco", country: "USA" },
+    isOnline: true,
     topicName: "GraphQL Best Practices",
     level: "Intermediate",
     speakerName: "Emily Chen",
-    dateTime: new Date("2024-07-18T18:30:00Z"),
-    timeZone: "PDT",
+    dateTime: "2024-07-18T18:30:00-07:00", // PDT timezone (-07:00)
     banner: "https://example.com/meetup6-banner.jpg"
   },
   {
     id: 7,
     location: { city: "London", country: "UK" },
+    isOnline: false,
     topicName: "Machine Learning Algorithms",
     level: "Advanced",
     speakerName: "Thomas Green",
-    dateTime: new Date("2024-07-14T17:00:00Z"),
-    timeZone: "BST",
+    dateTime: "2024-07-14T17:00:00+01:00", // BST timezone (+01:00)
     banner: "https://example.com/meetup7-banner.jpg"
   },
   {
     id: 8,
     location: { city: "New York City", country: "USA" },
+    isOnline: false,
     topicName: "Blockchain Applications",
     level: "Beginner",
     speakerName: "Sophia Johnson",
-    dateTime: new Date("2024-07-21T19:30:00Z"),
-    timeZone: "EDT",
+    dateTime: "2024-07-21T19:30:00-04:00", // EDT timezone (-04:00)
     banner: "https://example.com/meetup8-banner.jpg"
-  },
+  }
 ];
 
-const uniqueMeetupLocations = Array.from(new Set(meetupsList.map(meetup => meetup.location.city)));
+const meetupLocationsSet = new Set<string>();
+meetupsList.forEach(meetup => {
+  const city = meetup.location?.city;
+  if (city) {
+    meetupLocationsSet.add(city);
+  }
+});
+meetupLocationsSet.add("Online");
+
+const uniqueMeetupLocations = Array.from(meetupLocationsSet);
 const uniqueTopics = Array.from(new Set(meetupsList.map(meetup => meetup.topicName)));
 const uniqueLevels = Array.from(new Set(meetupsList.map(meetup => meetup.level)));
 

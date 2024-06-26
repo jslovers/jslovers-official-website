@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/Button";
 import { Meetup } from "@/types";
+import Link from "next/link";
 
 interface MeetupCardProps {
     className?: string;
@@ -12,9 +13,10 @@ const MeetupCard = ({
     className,
     meetup,
 }: MeetupCardProps) => {
-    const formatDate = (date:Date) => {
+    const formatDate = (meetupDateTime: string) => {
         const months = ['January', 'February', 'March', 'April', 'May', 'June',
             'July', 'August', 'September', 'October', 'November', 'December'];
+        const date = new Date(meetupDateTime);
         const day = date.getDate();
         const monthIndex = date.getMonth();
         const year = date.getFullYear();
@@ -40,22 +42,24 @@ const MeetupCard = ({
             <p className="text-xl font-medium leading-6 text-left pt-3">{formatDate(meetup.dateTime)}</p>
             <p className="text-[28px] font-semibold leading-8 text-left pt-2.5">{meetup.topicName}</p>
             <p className="text-lg font-semibold leading-5 text-[#383A48] text-left pt-2.5 pb-1.5 ">{meetup.speakerName}</p>
-            <button
-                className={cn(
-                    buttonVariants(),
-                    "border-solid border-2 border-border mt-2.5"
-                )}
-            >
-                View Details
-                <Image
-                    src="/assets/icons/right_arrow.svg"
-                    width="11"
-                    height="11"
-                    alt=""
-                    className="ml-1"
-                    loading="lazy"
-                />
-            </button>
+            <Link href={`/meetups/details/${meetup.id}`}>
+                <button
+                    className={cn(
+                        buttonVariants(),
+                        "border-solid border-2 border-border mt-2.5"
+                    )}
+                >
+                    View Details
+                    <Image
+                        src="/assets/icons/right_arrow.svg"
+                        width="11"
+                        height="11"
+                        alt=""
+                        className="ml-1"
+                        loading="lazy"
+                    />
+                </button>
+            </Link>
         </div>
     );
 };

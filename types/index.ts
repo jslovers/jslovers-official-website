@@ -56,16 +56,19 @@ export interface FilterDetails {
 
 export interface Meetup {
   id: number;
-  location: {
+  location?: {
     city: string;
     country: string;
   };
+  isOnline: boolean;
   topicName: string;
   level: "Beginner" | "Intermediate" | "Advanced";
   speakerName: string;
-  dateTime: Date;
-  timeZone: string;
+  dateTime: string;
   banner: string;
+  description?: string;
+  details?: string;
+  speakers?: string[];
 }
 
 export type MeetupFilterType = "Locations" | "Level" | "Topics";
