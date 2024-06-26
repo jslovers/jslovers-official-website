@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Icons } from "../Icons";
 import { FOOTER } from "@/config/footer";
 import { cn } from "@/lib/utils";
@@ -14,6 +15,21 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
             <p className="text-normal leading-6">
               Community for developers by developers.
             </p>
+            <h3 className="text-lg font-medium leading-6">Follow Us</h3>
+            <div className="mt-4 gap-4 flex ">
+              {FOOTER.FollowUs.map((social) => (
+                <Link key={social.platform} href={social.href || ""} target="_blank">
+                  <Image
+                    src={`/assets/icons/${social.platform}.svg`}
+                    width={25}
+                    height={25}
+                    alt={social.platform}
+                    loading="lazy"
+                    className="transition-transform duration-200 ease-in-out hover:scale-[1.2]"
+                  />
+                </Link>
+              ))}
+            </div>
           </section>
           <section className="mt-6 grid grid-cols-1 gap-8 lg:col-span-2 lg:mt-0">
             <div className="grid grid-cols-2 md:grid-cols-3 md:space-y-0">
@@ -21,16 +37,6 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                 <h3 className="text-lg font-medium leading-6">Quick Links</h3>
                 <ul className="mt-4 space-y-4">
                   {FOOTER.QuickLinks.map((item) => (
-                    <li key={item.title}>
-                      <Link className="text-gray-500 hover:underline" href={item.href || ""}>{item.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-              <section className="lg:text-center">
-                <h3 className="text-lg font-medium leading-6">Follow Us</h3>
-                <ul className="mt-4 space-y-4">
-                  {FOOTER.FollowUs.map((item) => (
                     <li key={item.title}>
                       <Link className="text-gray-500 hover:underline" href={item.href || ""}>{item.title}</Link>
                     </li>

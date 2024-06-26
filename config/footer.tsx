@@ -3,18 +3,16 @@ import { FooterData } from "@/types";
 
 export const FOOTER: FooterData = {
   QuickLinks: [
-    { title: "Meetups", href: "#" },
+    { title: "Meetups", href: "/meetups" },
     { title: "Jobs", href: "/jobs" },
     { title: "Speakers", href: "/speakers" },
     { title: "About", href: "/about" },
     { title: "Contact", href: "#" },
   ],
   FollowUs: [
-    { title: "Meetups", href: "#" },
-    { title: "Jobs", href: "/jobs" },
-    { title: "Speakers", href: "/speakers" },
-    { title: "About", href: "/about" },
-    { title: "Contact", href: "#" },
+    { platform: "github", href: "https://www.github.com" },
+    { platform: "twitter", href: "https://twitter.com", },
+    { platform: "linkedin", href: "https://www.linkedin.com", },
   ],
   Sponsors: [
     { title: "Microsoft", href: "#", logo: <Icons.microsoft /> },
