@@ -37,13 +37,41 @@ export interface Home {
 export interface Navigation {
   Navigation: NavItem[];
 }
+
+export interface FollowUs {
+  platform: string;
+  href: string;
+}
+
 export interface FooterData {
   QuickLinks: FooterItem[];
-  FollowUs: FooterItem[];
+  FollowUs: FollowUs[];
   Sponsors: FooterItem[];
 }
 
-export interface JobData {
+export interface FilterDetails {
+  filter_options: string[];
+  filter_backgroundColor: string;
+}
+
+export interface Meetup {
+  id: number;
+  location: {
+    city: string;
+    country: string;
+  };
+  topicName: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  speakerName: string;
+  dateTime: Date;
+  timeZone: string;
+  banner: string;
+}
+
+export type MeetupFilterType = "Locations" | "Level" | "Topics";
+export type MeetupFilterMap = Record<MeetupFilterType, FilterDetails>;
+
+export interface Job {
   id: number;
   company_name: string;
   location: {
@@ -56,13 +84,9 @@ export interface JobData {
   company_logo: string;
 }
 
-export type FilterType = "Company" | "Role" | "Experience" | "Location";
-export interface FilterDetails {
-  filter_options: string[];
-  filter_backgroundColor: string;
-}
+export type JobFilterType = "Company" | "Role" | "Experience" | "Location";
 
-export type FilterMap = Record<FilterType, FilterDetails>;
+export type JobFilterMap = Record<JobFilterType, FilterDetails>;
 
 export interface Speaker {
   id: string;

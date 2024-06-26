@@ -1,18 +1,18 @@
 "use client";
-import { jobsList, jobFilters } from '@/lib/mock_data';
+import { meetupsList, meetupFilters } from '@/lib/mock_data';
 import { cn } from '@/lib/utils';
 import React, { useCallback, useState } from 'react'
-import JobCard from './Cards/JobCard';
+import MeetupCard from './Cards/MeetupCard';
 import { buttonVariants } from "@/components/Button";
-import { JobFilterType } from '@/types';
+import { MeetupFilterType } from '@/types';
 import CarouselWithDots from './CarouselWithDots';
 
 
-export const JobSection = () => {
-    const [selectedFilters, setSelectedFilters] = useState<Map<JobFilterType, Set<string>>>(new Map());
-    const [activeFilterType, setActiveFilterType] = useState<JobFilterType | null>(null);
+export const MeetupSection = () => {
+    const [selectedFilters, setSelectedFilters] = useState<Map<MeetupFilterType, Set<string>>>(new Map());
+    const [activeFilterType, setActiveFilterType] = useState<MeetupFilterType | null>(null);
 
-    const toggleFilterType = (filterType: JobFilterType) => {
+    const toggleFilterType = (filterType: MeetupFilterType) => {
         if (activeFilterType === filterType) {
             setActiveFilterType(null);
         } else {
@@ -20,7 +20,7 @@ export const JobSection = () => {
         }
     }
 
-    const onFilterClick = useCallback((filterType: JobFilterType, filterName: string) => {
+    const onFilterClick = useCallback((filterType: MeetupFilterType, filterName: string) => {
         setSelectedFilters((prevFilters) => {
             const newFilters = new Map(prevFilters);
             const filterSet = new Set(newFilters.get(filterType) || []);
@@ -42,16 +42,16 @@ export const JobSection = () => {
     }, []);
 
     return (
-        <section className="mx-6 lg:mx-32">
+        <section className="mx-6 lg:mx-24 mt-10">
             <div className='mb-6'>
                 <p className="font-medium text-[20px] mb-4">
-                    Filter the job results as per your need
+                    Filter the meetup results as per your need
                 </p>
                 <div className="flex flex-nowrap lg:flex-wrap overflow-y-scroll lg:overflow-hidden items-center gap-4 mb-4">
-                    {(Object.keys(jobFilters) as JobFilterType[]).map((filterType, index) => (
+                    {(Object.keys(meetupFilters) as MeetupFilterType[]).map((filterType, index) => (
                         <button
-                            key={'job' + filterType + index}
-                            style={{ backgroundColor: jobFilters[filterType].filter_backgroundColor }}
+                            key={'meetup' + filterType + index}
+                            style={{ backgroundColor: meetupFilters[filterType].filter_backgroundColor }}
                             className={`text-xl font-medium py-3 px-6 rounded-[56px] inline-flex items-center border-solid border-2 border-border mb-4 lg:mb-0 whitespace-nowrap`}
                             onClick={() => toggleFilterType(filterType)}
                         >
@@ -76,7 +76,7 @@ export const JobSection = () => {
 
                 </div>
 
-                {activeFilterType && <div className="flex flex-nowrap lg:flex-wrap overflow-y-scroll lg:overflow-hidden items-center gap-4 mb-2 lg:mb-0">{jobFilters[activeFilterType].filter_options.map((option, index) => (
+                {activeFilterType && <div className="flex flex-nowrap lg:flex-wrap overflow-y-scroll lg:overflow-hidden items-center gap-4 mb-2 lg:mb-0">{meetupFilters[activeFilterType].filter_options.map((option, index) => (
                     <button
                         key={option + index}
                         className={`${selectedFilters.get(activeFilterType)?.has(option) ? 'bg-gray-300' : 'bg-[#F3F6E7]'} whitespace-nowrap text-xl font-medium py-3.5 px-7 rounded-full inline-flex items-center mb-4 lg:mb-0`}
@@ -108,44 +108,24 @@ export const JobSection = () => {
 
 
             </div>
-            {jobsList.length > 0 &&
+            {meetupsList.length > 0 &&
                 <>
                     <CarouselWithDots className="lg:hidden">
-                        {jobsList.map((job, i) => <JobCard key={'jobCard' + i} job={job} />)}
+                        {meetupsList.map((meetup, i) => <MeetupCard key={'meetupCard' + i} meetup={meetup} className="w-80" />)}
                     </CarouselWithDots>
                     <div className="hidden lg:grid gap-4 auto-rows-auto grid-flow-dense" style={{
                         gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
                     }}>
-                        {jobsList.map((job, i) => (
-                            <JobCard
-                                key={'jobCard' + i}
-                                job={job}
+                        {meetupsList.map((meetup, i) => (
+                            <MeetupCard
+                                key={'meetupCard' + i}
+                                meetup={meetup}
                                 className='min-w-min'
                             />
                         ))}
                     </div>
                 </>
             }
-
-            {/* {jobsList?.length > 0 &&
-                <>
-                    <p className="text-2xl font-medium my-9 lg:hidden text-center">
-                        Similar Jobs
-                    </p>
-                    <CarouselWithDots className="lg:hidden">
-                        {jobsList.map((job, i) => <JobCard key={i} {...job} />)}
-                    </CarouselWithDots>
-                    <div className="hidden carousel carousel-center max-w-full justify-between gap-7 lg:grid lg:grid-cols-4 lg:gap-4">
-                        {jobsList.map((job, i) => (
-                            <JobCard
-                                key={i}
-                                {...job}
-                                className="carousel-item min-w-[280px] lg:min-w-min"
-                            />
-                        ))}
-                    </div>
-                </>
-            } */}
 
             <div className="hidden lg:flex items-center justify-center">
                 <button

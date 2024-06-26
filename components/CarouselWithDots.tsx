@@ -46,7 +46,7 @@ const CarouselWithDots: React.FC<CarouselWithDotsProps> = ({ children,className,
   };
 
   return (
-    <div className={`flex flex-col items-center space-y-5 ${className}`}>
+    <div className={`flex flex-col items-center ${className}`}>
       <div className="carousel carousel-center flex max-w-full flex-wrap justify-between gap-7 py-5 xl:gap-8">
         {visibleItems}
       </div>
