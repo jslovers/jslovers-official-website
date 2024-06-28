@@ -13,7 +13,7 @@ import FeatureStaticList from "@/components/FeatureStaticList/FeatureStaticList"
 export default async function page() {
   return (
     <>
-      <section className="isolate">
+      <section data-cy="about-section" className="isolate">
         <div className="container flex w-fit flex-col items-center justify-center gap-6 py-16 lg:gap-9">
           <SectionHeader
             header="Who are we ?"
