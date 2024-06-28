@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cypress:open": "cypress open",
+    "cypress:headless:chrome":"cypress run -b chrome",
     "cypress:e2e": "cypress open --e2e",
     "cypress:e2e:chrome": "cypress open --e2e -b chrome",
     "clear": "rm -rf .next && rm -rf node_modules"
