@@ -7,6 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:headless:chrome":"cypress run -b chrome",
+    "cypress:e2e": "cypress open --e2e",
+    "cypress:e2e:chrome": "cypress open --e2e -b chrome",
     "clear": "rm -rf .next && rm -rf node_modules"
   },
   "dependencies": {
@@ -59,10 +63,12 @@
     "zod": "^3.23.6"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^10.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
+    "cypress": "^13.12.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.0",
     "postcss": "^8",
