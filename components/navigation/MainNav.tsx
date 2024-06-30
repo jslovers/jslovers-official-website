@@ -30,7 +30,7 @@ export function MainNav({ items }: MainNavProps) {
   const currentPath = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleMobileMenuToggle = () => {
+  const mobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -45,7 +45,7 @@ export function MainNav({ items }: MainNavProps) {
       <div className="flex items-center">
         <button
           className="flex items-center lg:hidden"
-          onClick={handleMobileMenuToggle}
+          onClick={mobileMenuToggle}
         >
           <svg
             className="h-6 w-6"
